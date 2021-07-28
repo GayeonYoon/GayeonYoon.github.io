@@ -1,6 +1,6 @@
 ---
-layout: php
-title: PHP PHP
-excerpt: "A List of PHP"
+layout: di
+title: Codeigniter
+excerpt: "A List of Codeigniter"
 comments: false
 ---
