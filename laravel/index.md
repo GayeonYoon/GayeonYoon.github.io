@@ -1,6 +1,6 @@
 ---
-layout: spring
-title: PHP PHP
-excerpt: "A List of PHP"
+layout: laravel
+title: Laravel
+excerpt: "A List of Laravel"
 comments: false
 ---
