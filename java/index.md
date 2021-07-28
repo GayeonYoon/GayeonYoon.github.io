@@ -1,6 +1,6 @@
 ---
-layout: php
-title: PHP PHP
-excerpt: "A List of PHP"
+layout: java
+title: JAVA POST
+excerpt: "A List of JAVA"
 comments: false
 ---
