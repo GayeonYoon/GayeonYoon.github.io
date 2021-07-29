@@ -20,10 +20,10 @@ REST API란 REST를 기반으로 만들어진 API를 의미한다.
 3. 해당 자원(URI)에 대한 CRUD  Operation 적용하는 것을 의미한다.
 
 > 참고) CRUD Operation ?
-> CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말로 
+ CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말로 
 REST에서의 CRUD Operation 동작 예시는 다음과 같다.
 
-> 
+
 Create : 데이터 생성(POST)
 Read : 데이터 조회(GET)
 Update : 데이터 수정(PUT)
