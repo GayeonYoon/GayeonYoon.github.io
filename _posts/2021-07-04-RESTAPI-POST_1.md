@@ -12,15 +12,14 @@ spring: true
 REST API란 REST를 기반으로 만들어진 API를 의미한다. 
 우선 REST부터 알아보자. 
 ## REST란 ? ##
-REST(Representational State Transfer)의 약자로 자원을 이름으로 구분하여 
+REST(Representational State Transfer)의 약자로 자원을 이름(자원의 표현)으로 구분하여 
 해당 자원의 상태를 주고받는 모든 것을 의미한다.
 
 1. HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고,
 2. HTTP Method(POST, GET, PUT, DELETE)를 통해
 3. 해당 자원(URI)에 대한 CRUD  Operation 적용하는 것을 의미한다.
 
-> 참고) CRUD란 ?
-
+ 참고) CRUD란 ?
  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말
 
 * Create : 데이터 생성(POST)
@@ -28,8 +27,37 @@ REST(Representational State Transfer)의 약자로 자원을 이름으로 구분
 * Update : 데이터 수정(PUT)
 * Delete : 데이터 삭제(DELETE)
 
+## REST 장 ·단점 ##
+* 장점
+  * HTTP 프로토콜의 인프라를 그대로 사용하므로 REST API 사용을 위한 별도의 인프라를 구출할 필요가 없다.
+  * HTTP 프로토콜의 표준을 최대한 활용하여 여러 추가적인 장점을 함께 가져갈 수 있게 해준다.
+  * HTTP 표준 프로토콜에 따르는 모든 플랫폼에서 사용이 가능하다.
+  * Hypermedia API의 기본을 충실히 지키면서 범용성을 보장한다.
+  * REST API 메시지가 의도하는 바를 명확하게 나타내므로 의도하는 바를 쉽게 파악할 수 있다.
+  * 여러가지 서비스 디자인에서 생길 수 있는 문제를 최소화한다.
+  * 서버와 클라이언트의 역할을 명확하게 분리한다.
 
+* 단점
+  * 표준이 존재하지 않는다.
+  * 사용할 수 있는 메소드가 4가지 밖에 없다.
+  * HTTP Method 형태가 제한적이다.
+  * 브라우저를 통해 테스트할 일이 많은 서비스라면 쉽게 고칠 수 있는 URL보다 Header 값이 왠지 더 어렵게 느껴진다.
+  * 구형 브라우저가 아직 제대로 지원해주지 못하는 부분이 존재한다.
+  * PUT, DELETE를 사용하지 못하는 점
+  * pushState를 지원하지 않는 점 
 
+## REST 구성 요소 ##
+* 자원(Resource): URI
+1)  모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
+2)  자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.
+3)  Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
+* 행위(Verb): HTTP Method
+1)  HTTP 프로토콜의 Method를 사용한다.
+2)  HTTP 프로토콜은 GET, POST, PUT, DELETE 와 같은 메서드를 제공한다.
+* 표현(Representation of Resource)
+1)  Client가 자원의 상태(정보)에 대한 조작을 요청하면 Server는 이에 적절한 응답(Representation)을 보낸다.
+2)  REST에서 하나의 자원은 JSON, XML, TEXT, RSS 등 여러 형태의 Representation으로 나타내어 질 수 있다.
+3)  JSON 혹은 XML를 통해 데이터를 주고 받는 것이 일반적이다.
 
 Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90's narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney's. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.
 
