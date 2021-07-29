@@ -39,8 +39,7 @@ REST(Representational State Transfer)의 약자로 자원을 이름(자원의 �
 
 * 단점
   * 표준이 존재하지 않는다.
-  * 사용할 수 있는 메소드가 4가지 밖에 없다.
-  * HTTP Method 형태가 제한적이다.
+  * 사용할 수 있는 메소드가 4가지이다. (HTTP Method 형태가 제한적임)
   * 브라우저를 통해 테스트할 일이 많은 서비스라면 쉽게 고칠 수 있는 URL보다 Header 값이 왠지 더 어렵게 느껴진다.
   * 구형 브라우저가 아직 제대로 지원해주지 못하는 부분이 존재한다.
   * PUT, DELETE를 사용하지 못하는 점
@@ -48,11 +47,10 @@ REST(Representational State Transfer)의 약자로 자원을 이름(자원의 �
 
 ## REST 구성 요소 ##
 * 자원(Resource): URI
+
   1)  모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
-  
-  3)  자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.
-  
-  5)  Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
+  2)  자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.
+  3)  Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
  
 * 행위(Verb): HTTP Method
   1)  HTTP 프로토콜의 Method를 사용한다.
