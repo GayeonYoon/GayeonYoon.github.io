@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "SpringBoot TEST TEST"
-date: 2012-05-22
+title: "SpringBoot REST API 프로젝트 [1]"
+date: 2021-07-04
 excerpt: "A ton of text to test readability."
 tags: [sample post, readability, test]
 comments: true
