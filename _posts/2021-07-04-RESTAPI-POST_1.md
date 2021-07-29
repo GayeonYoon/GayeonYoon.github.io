@@ -24,7 +24,7 @@ CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이�
 
 REST에서의 CRUD Operation 동작 예시는 다음과 같다.
 
-{: .notice}
+ 
 Create : 데이터 생성(POST)
 
 Read : 데이터 조회(GET)
