@@ -12,7 +12,8 @@ spring: true
 REST API란 REST를 기반으로 만들어진 API를 의미한다. 
 우선 REST부터 알아보자. 
 ## REST란 ? ##
-REST(Representational State Transfer)의 약자로 자원을 이름으로 구분하여 해당 자원의 상태를 주고받는 모든 것을 의미한다.
+REST(Representational State Transfer)의 약자로 자원을 이름으로 구분하여 
+해당 자원의 상태를 주고받는 모든 것을 의미한다.
 
 즉,
 1. HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고,
