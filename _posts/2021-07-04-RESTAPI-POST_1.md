@@ -74,8 +74,11 @@ REST(Representational State Transfer)의 약자로 자원을 이름(자원의 �
 * JSON 혹은 XML를 통해 데이터를 주고 받는 것이 일반적이다.
 
   
+  
 
 ------
+
+
 
 # REST API란 ? #
 
