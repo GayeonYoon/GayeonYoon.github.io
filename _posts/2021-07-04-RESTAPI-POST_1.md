@@ -8,10 +8,14 @@ comments: true
 spring: true
 ---
 
-
 REST API란 REST를 기반으로 만들어진 API를 의미한다. 
+
 우선 REST부터 알아보자. 
+
+
+
 # REST란 ? #
+
 REST(Representational State Transfer)의 약자로 자원을 이름(자원의 표현)으로 구분하여 
 해당 자원의 상태를 주고받는 모든 것을 의미한다.
 
@@ -20,7 +24,7 @@ REST(Representational State Transfer)의 약자로 자원을 이름(자원의 �
 3. 해당 자원(URI)에 대한 CRUD  Operation 적용하는 것을 의미한다.
 
  참고) CRUD란 ?
- 
+
  CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제) 를 말한다.
 
 * Create : 데이터 생성(POST)
@@ -29,6 +33,7 @@ REST(Representational State Transfer)의 약자로 자원을 이름(자원의 �
 * Delete : 데이터 삭제(DELETE)
 
 ## REST 장 ·단점 ##
+
 * 장점
   * HTTP 프로토콜의 인프라를 그대로 사용하므로 REST API 사용을 위한 별도의 인프라를 구출할 필요가 없다.
   * HTTP 프로토콜의 표준을 최대한 활용하여 여러 추가적인 장점을 함께 가져갈 수 있게 해준다.
@@ -49,15 +54,18 @@ REST(Representational State Transfer)의 약자로 자원을 이름(자원의 �
 ## REST 구성 요소 ##
 
 1. 자원(Resource): URI
+
 * 모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
 * 자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.
 * Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
- 
+
 2. 행위(Verb): HTTP Method
+
 * HTTP 프로토콜의 Method를 사용한다.
 * HTTP 프로토콜은 GET, POST, PUT, DELETE 와 같은 메서드를 제공한다.
-  
+
 3. 표현(Representation of Resource)
+
 * Client가 자원의 상태(정보)에 대한 조작을 요청하면 Server는 이에 적절한 응답(Representation)을 보낸다.
 * REST에서 하나의 자원은 JSON, XML, TEXT, RSS 등 여러 형태의 Representation으로 나타내어 질 수 있다.
 * JSON 혹은 XML를 통해 데이터를 주고 받는 것이 일반적이다.
@@ -69,42 +77,54 @@ API(Application Programming Interface)란 ?
 데이터와 기능의 집합을 제공하여 컴퓨터 프로그램간 상호작용을 촉진하며, 서로 정보를 교환가능 하도록 하는 것
 
 ## REST API의 정의 ##
+
 REST 기반으로 서비스 API를 구현한 것
 최근 OpenAPI(누구나 사용할 수 있도록 공개된 API: 구글 맵, 공공 데이터 등), 마이크로 서비스(하나의 큰 애플리케이션을 여러 개의 작은 애플리케이션으로 쪼개어 변경과 조합이 가능하도록 만든 아키텍처) 등을 제공하는 업체 대부분은 REST API를 제공한다. 
 
 ## REST API의 특징 ##
+
 1. REST 기반으로 시스템을 분산해 확장성과 재사용성을 높여 유지보수 및 운용을 편리하게 할 수 있다.
 2. REST는 HTTP 표준을 기반으로 구현하므로, HTTP를 지원하는 프로그램 언어로 클라이언트, 서버를 구현할 수 있다.
 3. 즉, REST API를 제작하면 델파이 클라이언트 뿐 아니라, 자바, C#, 웹 등을 이용해 클라이언트를 제작할 수 있다. 
 
 
 ## REST API 설계 규칙 ##
+
 1. 슬래시 구분자(/ )는 계층 관계를 나타내는데 사용한다.
-    Ex) http://restapi.example.com/houses/apartments
-    
+
+   Ex) http://restapi.example.com/houses/apartments 
+
 2. URI 마지막 문자로 슬래시(/ )를 포함하지 않는다.
-  1) URI에 포함되는 모든 글자는 리소스의 유일한 식별자로 사용되어야 하며 URI가 다르다는 것은 리소스가 다르다는 것이고, 역으로 리소스가 다르면 URI도 달라져야 한다.
-  2) REST API는 분명한 URI를 만들어 통신을 해야 하기 때문에 혼동을 주지 않도록 URI 경로의 마지막에는 슬래시(/)를 사용하지 않는다.
+
+   1) URI에 포함되는 모든 글자는 리소스의 유일한 식별자로 사용되어야 하며 URI가 다르다는 것은 리소스가 다르다는 것이고, 역으로 리소스가 다르면 URI도 달라져야 한다. 
+   2) REST API는 분명한 URI를 만들어 통신을 해야 하기 때문에 혼동을 주지 않도록 URI 경로의 마지막에는 슬래시(/)를 사용하지 않는다.
+
     Ex) http://restapi.example.com/houses/apartments/ (X)
-    
+
 3. 하이픈(- )은 URI 가독성을 높이는데 사용한다.
-  1) 불가피하게 긴 URI경로를 사용하게 된다면 하이픈을 사용해 가독성을 높인다.
-  
+
+​    1) 불가피하게 긴 URI경로를 사용하게 된다면 하이픈을 사용해 가독성을 높인다.
+
 4. 언더바(_)는 URI에 사용하지 않는다.
-  1) 밑줄은 보기 어렵거나 밑줄 때문에 문자가 가려지기도 하므로 가독성을 위해 밑줄은 사용하지 않는다.
+   1) 밑줄은 보기 어렵거나 밑줄 때문에 문자가 가려지기도 하므로 가독성을 위해 밑줄은 사용하지 않는다.
 
 5. URI 경로에는 소문자가 적합하다.
-  1) URI 경로에 대문자 사용은 피하도록 한다.
-  2) RFC 3986(URI 문법 형식)은 URI 스키마와 호스트를 제외하고는 대소문자를 구별하도록 규정하기 때문
+
+    1) URI 경로에 대문자 사용은 피하도록 한다.
+    2) RFC 3986(URI 문법 형식)은 URI 스키마와 호스트를 제외하고는 대소문자를 구별하도록 규정하기 때문
 
 6.확장자는 URI에 포함하지 않는다.
-  1) API에서는 메시지 바디 내용의 포맷을 나타내기 위한 파일 확장자를 URI 안에 포함시키지 않는다.
-  2) Acept header를 사용한다.
+
+    1) API에서는 메시지 바디 내용의 포맷을 나타내기 위한 파일 확장자를 URI 안에 포함시키지 않는다.
+    2) Acept header를 사용한다.
+
     EX) http://restapi.example.com/members/soccer/345/photo.jpg (X)
     Ex) GET / members/soccer/345/photo HTTP/1.1 Host: restapi.example.com Accept: image/jpg (O)
 
 7.리소스 간에는 연관 관계가 있는 경우
-  1) /리소스명/리소스 ID/관계가 있는 다른 리소스명
+
+    1) /리소스명/리소스 ID/관계가 있는 다른 리소스명
+
     Ex) GET : /users/{userid}/devices (일반적으로 소유 ‘has’의 관계를 표현할 때)
 
 
