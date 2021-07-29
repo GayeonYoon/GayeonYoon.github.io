@@ -49,8 +49,10 @@ REST(Representational State Transfer)의 약자로 자원을 이름(자원의 �
 ## REST 구성 요소 ##
 * 자원(Resource): URI
   1)  모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
-  2)  자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.
-  3)  Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
+  
+  3)  자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.
+  
+  5)  Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
  
 * 행위(Verb): HTTP Method
   1)  HTTP 프로토콜의 Method를 사용한다.
