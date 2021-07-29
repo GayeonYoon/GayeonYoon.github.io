@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "SpringBoot REST API 프로젝트 [1]"
+title: "[SpringBoot] REST API Project [1]"
 date: 2021-07-04
-excerpt: "REST API란 무엇인가? / SpringBoot로 프로젝트 시작하기"
+excerpt: "REST API란 무엇인가?"
 tags: [SpringBoot, REST API, JAVA, Eclipse]
 comments: true
 spring: true
