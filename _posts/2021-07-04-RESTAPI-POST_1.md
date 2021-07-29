@@ -24,18 +24,10 @@ REST(Representational State Transfer)의 약자로 자원을 이름으로 구분
 CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말
 
 
-Create : 데이터 생성(POST)
-{: .notice}
-
-Read : 데이터 조회(GET)
-{: .notice}
-
-Update : 데이터 수정(PUT)
-{: .notice}
-
-Delete : 데이터 삭제(DELETE)
-{: .notice}
-
+* Create : 데이터 생성(POST)
+* Read : 데이터 조회(GET)
+* Update : 데이터 수정(PUT)
+* Delete : 데이터 삭제(DELETE)
 
 
 
