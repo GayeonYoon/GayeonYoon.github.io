@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[SpringBoot] REST API를 알아보자.]"
+title: "[SpringBoot] REST와 REST API에 대하여 알아보자."
 date: 2021-07-04
 excerpt: "REST API란 무엇인가?"
 tags: [SpringBoot, REST API, JAVA, Eclipse]
