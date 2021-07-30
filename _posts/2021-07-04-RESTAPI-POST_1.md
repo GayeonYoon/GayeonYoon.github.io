@@ -4,7 +4,7 @@ title: "[SpringBoot] REST와 REST API에 대하여 알아보자."
 date: 2021-07-04
 excerpt: "REST API란 무엇인가?"
 tags: [REST, REST API]
-comments: true
+comments: false
 spring: true
 
 ---
