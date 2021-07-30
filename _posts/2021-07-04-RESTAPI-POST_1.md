@@ -110,7 +110,7 @@ REST API(REpresentational State Transfer)는 웹상에서 사용되는 여러 �
 
 ------
 *참고* 
- **https://www.redhat.com/ko/topics/api/what-is-a-rest-api*
+ *https://www.redhat.com/ko/topics/api/what-is-a-rest-api*
  *https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html*
  *https://mangkyu.tistory.com/46*
  *https://brainbackdoor.tistory.com/53*
