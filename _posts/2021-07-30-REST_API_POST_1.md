@@ -6,6 +6,7 @@ excerpt: "REST API Project - 설정"
 tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger, Eclipse]
 comments: false
 spring: true
+feature: /assets/img/spring_boot_logo.jpg
 
 ---
 # 1. SpringBoot 프로젝트 생성
