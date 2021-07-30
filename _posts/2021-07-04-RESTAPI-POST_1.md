@@ -110,11 +110,11 @@ REST API(REpresentational State Transfer)는 웹상에서 사용되는 여러 �
 
 ------
 *참고* 
- *https://www.redhat.com/ko/topics/api/what-is-a-rest-api*
- *https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html*
- *https://mangkyu.tistory.com/46*
- *https://brainbackdoor.tistory.com/53*
- *https://khj93.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-REST-API%EB%9E%80-REST-RESTful%EC%9D%B4%EB%9E%80*
- https://velog.io/@taeha7b/api-restapi-restfulapi*
+# *https://www.redhat.com/ko/topics/api/what-is-a-rest-api*
+# *https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html*
+# *https://mangkyu.tistory.com/46*
+# *https://brainbackdoor.tistory.com/53*
+# *https://khj93.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-REST-API%EB%9E%80-REST-RESTful%EC%9D%B4%EB%9E%80*
+# https://velog.io/@taeha7b/api-restapi-restfulapi*
 
 
