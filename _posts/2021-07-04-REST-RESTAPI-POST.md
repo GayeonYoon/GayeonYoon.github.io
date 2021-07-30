@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[SpringBoot] REST? REST API? "
+title: "[Spring Boot] REST? REST API? "
 date: 2021-07-04
 excerpt: " REST 와 REST API에 대하여 "
 tags: [REST, REST API]
