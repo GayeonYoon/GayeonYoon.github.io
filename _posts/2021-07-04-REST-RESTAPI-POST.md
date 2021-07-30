@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[SpringBoot] REST와 REST API란 무엇인가?"
+title: "[SpringBoot] REST? REST API? "
 date: 2021-07-04
-excerpt: "REST API란 무엇인가?"
+excerpt: " REST 와 REST API에 대하여 "
 tags: [REST, REST API]
 comments: false
 spring: true
@@ -111,6 +111,7 @@ REST API(REpresentational State Transfer)는 웹상에서 사용되는 여러 �
 ------
 
 *참고* 
+
  *https://www.redhat.com/ko/topics/api/what-is-a-rest-api*
  
  *https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html*
