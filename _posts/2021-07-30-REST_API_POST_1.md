@@ -1,13 +1,30 @@
 ---
 layout: post
-title: "[SpringBoot] REST API Project [1]"
+title: "[Spring Boot] REST API Project [1]"
 date: 2021-07-04
-excerpt: "REST API Project [1]"
-tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger]
+excerpt: "REST API Project - 설정"
+tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger, Eclipse]
 comments: false
 spring: true
 
 ---
+# 1. SpringBoot 프로젝트 생성
+
+Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 
+
+<사진>
+
+
+
+
+{% highlight css %} #container { float: left; margin: 0 -240px 0 0; width: 100%; } {% endhighlight %}
+
+
+
+
+
+
+
 
 REST API란 REST를 기반으로 만들어진 API를 의미한다. 
 
