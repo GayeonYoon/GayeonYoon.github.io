@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[Spring Boot] REST? REST API? "
+title: "REST? REST API? "
 date: 2021-07-04
 excerpt: " REST 와 REST API에 대하여 "
 tags: [REST, REST API]
 comments: false
 spring: true
-
+etc: true   #만들어야해
 ---
 
 REST API란 REST를 기반으로 만들어진 API를 의미한다. 
