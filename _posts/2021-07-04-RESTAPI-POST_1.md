@@ -3,7 +3,7 @@ layout: post
 title: "[SpringBoot] REST와 REST API에 대하여 알아보자."
 date: 2021-07-04
 excerpt: "REST API란 무엇인가?"
-tags: [SpringBoot, REST API, JAVA, Eclipse]
+tags: [REST, REST API]
 comments: true
 spring: true
 
@@ -103,5 +103,7 @@ REST 기반으로 서비스 API를 구현한 것
 4. URI는 소문자로만 구성한다.
 5. 가독성이 떨어지는 경우 하이픈을 사용한다.
  
+ 
+ REST 와 REST API에 대하여 알아보았으니 이제 SpringBoot를 이용한 Rest API Project를 시작해보자 !  
 
  
