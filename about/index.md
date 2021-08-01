@@ -8,7 +8,10 @@ comments: false
     
 <center>Welcome to my Blog😊</center>
 
+# “If I rest, I rust. 쉬면 녹슨다.” 
+
 ## Profile
+* Name : Gayeon Yoon
 * Phone : 010-8780-2893
 * E-mail : yoonpiri@gmail.com
 * Blog : https://gayeonyoon.github.io/
@@ -19,7 +22,7 @@ comments: false
 ### Back-End Skills
 * Java, PHP
 * Spring, SpringBoot
-* Codeigniter
+* Codeigniter4
 * Maven, Gradle 
 
 ### Front-End Skills
