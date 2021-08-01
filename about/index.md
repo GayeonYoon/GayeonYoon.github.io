@@ -11,11 +11,10 @@ comments: false
 ## Profile
 * Name : Gayeon Yoon
 * Phone : 010-8780-2893
-* E-mail : yoonpiri@gmail.com
-* Blog : https://gayeonyoon.github.io/
-* Git Hub: https://github.com/GayeonYoon
-
-
+* E-mail : yoonpiri@gmail.com  
+* Blog : [https://gayeonyoon.github.io/](https://gayeonyoon.github.io/)
+* Git Hub: [https://github.com/GayeonYoon](https://github.com/GayeonYoon)
+ 
 ## Technical Skills
 ### Back-End Skills
 * Java (openjdk 13), PHP 7
