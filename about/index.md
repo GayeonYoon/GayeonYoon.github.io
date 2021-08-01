@@ -17,8 +17,8 @@ feature: /assets/img/bg.jpg
 * E-mail : yoonpiri@gmail.com  
 * Blog : [https://gayeonyoon.github.io/](https://gayeonyoon.github.io/)
 * Git Hub: [https://github.com/GayeonYoon](https://github.com/GayeonYoon)
-
 <br><br>
+
 ## Technical Skills
 ### Back-End Skills
  * Java (openjdk 13), PHP 7
