@@ -8,17 +8,35 @@ comments: false
     
 <center>Welcome to my Blog😊</center>
 
-## 연락처
+## Profile
 * Phone : 010-8780-2893
 * E-mail : yoonpiri@gmail.com
 * Blog : https://gayeonyoon.github.io/
 * Git Hub: https://github.com/GayeonYoon
 
-## 보유기술
+## Technical Skills
+
+### Back-End Skills
 * Java, PHP
 * Spring, SpringBoot
 * Codeigniter
 * Maven, Gradle 
+
+### Front-End Skills
+* Javascript, jQuery
+* HTML5, CSS
+* Ajax
+
+### DB
+* Oracle
+* Mysql, MariaDB
+* MS-SQL
+
+## Work Experience 
+
+## Certificate
+* 정보처리기사
+
 
 {% capture images %}
     https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
