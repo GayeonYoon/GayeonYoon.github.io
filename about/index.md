@@ -11,7 +11,8 @@ feature: /assets/img/bg.jpg
 
  # “If I rest, I rust. 쉬면 녹슨다.
  
-## Profile* Name : Gayeon Yoon
+## Profile
+* Name : Gayeon Yoon
 * Phone : 010-8780-2893
 * E-mail : yoonpiri@gmail.com  
 * Blog : [https://gayeonyoon.github.io/](https://gayeonyoon.github.io/)
@@ -19,14 +20,16 @@ feature: /assets/img/bg.jpg
 <br><br>
 
 ## Technical Skills
-### Back-End Skills * Java (openjdk 13), PHP 7
+### Back-End Skills 
+* Java (openjdk 13), PHP 7
  * Spring 4.0, SpringBoot
  * Codeigniter 4
  * Maven, Gradle 
  * Servlet, JSP
  * myBATIS, JPA
 
-### Front-End Skills * Javascript, jQuery
+### Front-End Skills 
+* Javascript, jQuery
  * HTML5, CSS 3 
  * Ajax
    
