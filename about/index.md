@@ -13,7 +13,7 @@ feature: /assets/img/bg.jpg
  
 ## Contact
 * Name : Gayeon Yoon
-* Phone : 010-8780-2893
+* Phone : 010-0000-0000
 * E-mail : yoonpiri@gmail.com  
 * Blog : [https://gayeonyoon.github.io/](https://gayeonyoon.github.io/)
 * Git Hub: [https://github.com/GayeonYoon](https://github.com/GayeonYoon)
