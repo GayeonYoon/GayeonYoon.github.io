@@ -17,6 +17,7 @@ feature: /assets/img/bg.jpg
 * Git Hub: [https://github.com/GayeonYoon](https://github.com/GayeonYoon)
 <br><br><br>
 
+------
 ## Technical Skills
 ### Back-End Skills 
 * Java (openjdk 13), PHP 7
@@ -37,11 +38,13 @@ feature: /assets/img/bg.jpg
  * MS-SQL
 <br><br><br>
 
+------
 ## Work Experience
  * 2020.04 - 2020.11 Java언어 기반의 스마트 웹 Full-Stack개발자 양성 과정 수료
  * 2020.11 - 2021.11 ㅇㅎㅍ
 <br><br><br>
 
+------
 ## Certificate
  * 정보처리기사 
 
