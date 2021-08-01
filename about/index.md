@@ -11,7 +11,7 @@ feature: /assets/img/bg.jpg
 
  # “If I rest, I rust. 쉬면 녹슨다.
  
-## Profile
+## Contact
 * Name : Gayeon Yoon
 * Phone : 010-8780-2893
 * E-mail : yoonpiri@gmail.com  
