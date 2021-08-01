@@ -17,7 +17,8 @@ feature: /assets/img/bg.jpg
 * E-mail : yoonpiri@gmail.com  
 * Blog : [https://gayeonyoon.github.io/](https://gayeonyoon.github.io/)
 * Git Hub: [https://github.com/GayeonYoon](https://github.com/GayeonYoon)
- 
+
+<br><br>
 ## Technical Skills
 ### Back-End Skills
 * Java (openjdk 13), PHP 7
@@ -36,11 +37,12 @@ feature: /assets/img/bg.jpg
 * Oracle
 * Mysql, MariaDB
 * MS-SQL
+<br><br>
 
 ## Work Experience
 * 2020.04 - 2020.11 Java언어 기반의 스마트 웹 Full-Stack개발자 양성 과정 수료
 * 2020.11 - 2021.11 ㅇㅎㅍ
-
+<br><br>
 
 ## Certificate
 * 정보처리기사 
