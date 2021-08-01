@@ -21,31 +21,31 @@ feature: /assets/img/bg.jpg
 <br><br>
 ## Technical Skills
 ### Back-End Skills
-* Java (openjdk 13), PHP 7
-* Spring 4.0, SpringBoot
-* Codeigniter 4
-* Maven, Gradle 
-* Servlet, JSP
-* myBATIS, JPA
+ * Java (openjdk 13), PHP 7
+ * Spring 4.0, SpringBoot
+ * Codeigniter 4
+ * Maven, Gradle 
+ * Servlet, JSP
+ * myBATIS, JPA
 
 ### Front-End Skills
-* Javascript, jQuery
-* HTML5, CSS 3 
-* Ajax
+ * Javascript, jQuery
+ * HTML5, CSS 3 
+ * Ajax
    
 ### DB
-* Oracle
-* Mysql, MariaDB
-* MS-SQL
+ * Oracle
+ * Mysql, MariaDB
+ * MS-SQL
 <br><br>
 
 ## Work Experience
-* 2020.04 - 2020.11 Java언어 기반의 스마트 웹 Full-Stack개발자 양성 과정 수료
-* 2020.11 - 2021.11 ㅇㅎㅍ
+ * 2020.04 - 2020.11 Java언어 기반의 스마트 웹 Full-Stack개발자 양성 과정 수료
+ * 2020.11 - 2021.11 ㅇㅎㅍ
 <br><br>
 
 ## Certificate
-* 정보처리기사 
+ * 정보처리기사 
 
 
 {% capture images %}
