@@ -1,9 +1,12 @@
 ---
+
 layout: page
 title: About Me
 tags: [About Me]
 date: 2021-08-01
 comments: false
+feature: /assets/img/bg.jpg
+
 --- 
 
  # “If I rest, I rust. 쉬면 녹슨다.
