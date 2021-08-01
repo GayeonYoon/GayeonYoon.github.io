@@ -6,8 +6,8 @@ date: 2021-08-01
 comments: false
 --- 
 
-<center> # “If I rest, I rust. 쉬면 녹슨다.” # </center>
-
+ # “If I rest, I rust. 쉬면 녹슨다.
+ 
 ## Profile
 * Name : Gayeon Yoon
 * Phone : 010-8780-2893
