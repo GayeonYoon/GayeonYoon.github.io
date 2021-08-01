@@ -32,7 +32,8 @@ comments: false
 * Mysql, MariaDB
 * MS-SQL
 
-## Work Experience 
+## Work Experience
+2020.11 - 2021.11 
 
 ## Certificate
 * 정보처리기사
