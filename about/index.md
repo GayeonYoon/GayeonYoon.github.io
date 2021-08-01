@@ -17,8 +17,8 @@ comments: false
 * Blog : https://gayeonyoon.github.io/
 * Git Hub: https://github.com/GayeonYoon
 
-## Technical Skills
 
+## Technical Skills
 ### Back-End Skills
 * Java, PHP
 * Spring, SpringBoot
@@ -36,7 +36,8 @@ comments: false
 * MS-SQL
 
 ## Work Experience
-2020.11 - 2021.11 
+2020.11 - 2021.11 ㅇㅎㅍ
+
 
 ## Certificate
 * 정보처리기사
