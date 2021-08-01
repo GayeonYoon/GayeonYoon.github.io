@@ -6,7 +6,7 @@ date: 2021-08-01
 comments: false
 ---
     
-<center>Welcome to my Blog:star:</center>
+<center>Welcome to my Blog😊</center>
 
 ## Features
 * Minimal, you can focus on your content
