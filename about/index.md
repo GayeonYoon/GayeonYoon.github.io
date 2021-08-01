@@ -4,11 +4,9 @@ title: About Me
 tags: [About Me]
 date: 2021-08-01
 comments: false
----
-    
-<center>Welcome to my Blog😊</center>
+--- 
 
-# “If I rest, I rust. 쉬면 녹슨다.” 
+<center># “If I rest, I rust. 쉬면 녹슨다.” </center>
 
 ## Profile
 * Name : Gayeon Yoon
