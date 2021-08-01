@@ -6,7 +6,7 @@ date: 2021-08-01
 comments: false
 --- 
 
-<center># “If I rest, I rust. 쉬면 녹슨다.” </center>
+#<center>“If I rest, I rust. 쉬면 녹슨다.” </center>
 
 ## Profile
 * Name : Gayeon Yoon
