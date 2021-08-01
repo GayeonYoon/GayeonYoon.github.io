@@ -18,7 +18,7 @@ comments: false
 
 ## Technical Skills
 ### Back-End Skills
-* Java, PHP
+* Java (openjdk 13), PHP 7
 * Spring 4.0, SpringBoot
 * Codeigniter 4
 * Maven, Gradle 
