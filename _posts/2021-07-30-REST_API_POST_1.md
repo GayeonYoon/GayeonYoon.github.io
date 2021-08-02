@@ -155,7 +155,7 @@ configurations {
 
 
 # 3. application.properties를 application.yml로 변경.<br>
-(src/main/resources/application.properties)
+(위치 : src/main/resources/application.properties)
 
 {% highlight yml %}
 spring:
@@ -200,6 +200,9 @@ spring:
 server:
   port: 9440
 {% endhighlight %}
+
+
+* DB는 DBeaver 21.1.1 사용!
 
 
 
