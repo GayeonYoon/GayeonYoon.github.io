@@ -12,8 +12,8 @@ feature: /assets/img/spring_boot_logo.jpg
 
 # 1. SpringBoot 프로젝트 생성
 
-Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 후
-Project Name 입력, Type은 Gradle로 선택.
+Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 후 <br>
+Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
 
 <figure>
 	<img src="/assets/img/RestApi_post1.png" style="max-height:500;">
