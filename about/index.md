@@ -41,8 +41,8 @@ feature: /assets/img/bg.jpg
 
 ------
 ## Work Experience
- * 2020.04 - 2020.11 Java언어 기반의 스마트 웹 Full-Stack개발자 양성 과정 수료
  * 2020.11 - 2021.11 ㅇㅎㅍ
+ * 2020.04 - 2020.11 Java언어 기반의 스마트 웹 Full-Stack개발자 양성 과정 수료
 <br><br>
 
 ------
