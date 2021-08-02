@@ -298,11 +298,8 @@ import com.yoon.api.entity.ApiHistoryEntity;
 public interface ApiHistoryService {
 
 	public boolean createHistory(ApiHistoryEntity apiHistoryParam);
-	  
 	public ApiHistoryEntity readHistory(String historyKeyParam);
-	
 	public boolean updateHistory(ApiHistoryEntity apiHistoryParam);
-	
 	public boolean deleteHistory(String historyKeyParam);
 	
 }
@@ -348,8 +345,7 @@ public class ApiHistoryServiceImpl implements ApiHistoryService {
 		//findByHistoryKey() return => Optional<ApiHistoryEntity>
 		// orElse => NPE. Exception을 처리해줘. 발생하지않음. 필요할땐 get() 사용해.
 		ApiHistoryEntity result = apiHistoryRepo.findByHistoryKey(historyKeyParam).orElse(new ApiHistoryEntity());
-		logger.info(result.toString());
-
+		logger.info(result.toString()); 
 		return result;
 	}
 
