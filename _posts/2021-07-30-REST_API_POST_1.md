@@ -154,7 +154,7 @@ configurations {
 {% endhighlight %}
 
 
-# 3. application.properties 를 application.yml로 변경.<br>
+# 3. application.properties를 application.yml로 변경.<br>
 (src/main/resources/application.properties)
 
 {% highlight yml %}
