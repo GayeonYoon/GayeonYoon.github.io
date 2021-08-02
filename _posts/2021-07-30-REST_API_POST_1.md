@@ -12,11 +12,13 @@ feature: /assets/img/spring_boot_logo.jpg
 
 # 1. SpringBoot 프로젝트 생성
 
-Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 
+Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 후
+Project Name 입력, Type은 Gradle로 선택.
 
 <figure>
-	<img src="/assets/img/RestApi_post1.png">
+	<img src="/assets/img/RestApi_post1.png" style="max-height:500;">
 </figure>
+ 
  
 
 {% highlight css %} #container { float: left; margin: 0 -240px 0 0; width: 100%; } {% endhighlight %}
