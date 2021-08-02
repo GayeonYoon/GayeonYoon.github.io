@@ -44,9 +44,9 @@ feature: /assets/img/spring_boot_logo.jpg
 ## 2. SwaggerConfig.java 생성
 (위치: src/main/java/com/yoon/api/config/SwaggerConfig.java)
 
- 1) @ Configuration
- 2) @ EnableSwagger2	//Swagger2 버전을 활성화 하겠다는 어노테이션
- 3) @ Profile("dev")  // 백도어방지
+ 1) @Configuration : 클래스가 Bean 설정 클래스임을 의미함 <br>
+ 2) @EnableSwagger2 : Swagger2 버전을 활성화 하겠다는 의미 <br>
+ 3) @Profile("dev") : 전 게시글 application.yml 에서 profile 설정 <br>
 
 
 {% highlight java %}
@@ -81,26 +81,14 @@ public class SwaggerConfig {
 	}
 } 
 {% endhighlight %}
-
-
-
- 
-#### @ Around
-* 어느 시점에 적용할 것인지를 정의하는 것.
-* @ Around 어드바이스는 앞서 설명한 어드바이스의 기능을 모두 포괄한다.
-* 대상 메써드를 감싸는 느낌으로 실행 전후 시점에 원하는 작업을 할 수 있다. 대상 메써드의 실행 제어 및 리턴 값 가공도 가능하다.
-* 메서드의 실행 전/후에 공통로직을 적용하고 싶을 때 사용하고 @ Before는 메서드 실행 전, @ After는 메서드 실행 후에 공통 로직을 적용하고 싶을 때 사용한다.
-
  
 # 6. Swagger UI 확인
 
-1) Project 아래에 API_Log 폴더 생성된 후 하위로 날짜별 log 파일 생성된것 확인.
+1) http://localhost:9440/swagger-ui.html 링크
 <figure>
-	<img src="/assets/img/log_directory.png">
+	<img src="/assets/img/swagger-ui.png">
 </figure>
-
-2) .log 파일 내용 확인
-<figure>
-	<img src="/assets/img/log_confirm.png">
-</figure>
+ 
+ Swagger-ui.html 이 잘 뜨면 성공! <br>
+ 이어서 REST API 를 완성하겠다~~ 😀
 
