@@ -154,7 +154,8 @@ configurations {
 
 
 # 3. application.properties를 application.yml로 변경.<br>
-(위치 : src/main/resources/application.properties)
+(위치 : src/main/resources/application.properties) <br>
+* DB는 MySQL 과 DBeaver 사용!
 
 {% highlight yml %}
 spring:
@@ -202,12 +203,10 @@ server:
 {% endhighlight %}
 
 
-* DB는 MySQL 과 DBeaver 사용!
-
 # 4. logback-spring.xml 파일 추가<br>
 (위치 : src/main/resources/logback-spring.xml)<br>
-1) application.yml 에서 logging path 를 ./API_LOG 로 설정.
-2) logback-spring.xml 에서 fileNamePattern을 <b>${LOG_PATH}</b>/APIServer_log.%d{yyyy-MM-dd}-%i.log 로 설정.
+1) application.yml 에서 logging path 를 ./API_LOG 로 설정.<br>
+2) logback-spring.xml 에서 fileNamePattern을 <b>${LOG_PATH}</b>/APIServer_log.%d{yyyy-MM-dd}-%i.log 로 설정.<br>
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
