@@ -34,8 +34,6 @@ Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
 # 2. build.gradle 에서 dependencies 등을 추가함.
   
 {% highlight gradle %}
-{% raw %}
- 
 buildscript {
    dependencies {
        classpath("gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:1.0.10")
@@ -153,10 +151,53 @@ compileQuerydsl {
 configurations {
     querydsl.extendsFrom compileClasspath
 }
-{% endraw %}
 {% endhighlight %}
 
 
+# 3. src/main/resources/application.properties 를 application.yml로 변경.
+{% highlight yml %}
+spring:
+  profiles:
+    active:
+    - dev
+  pid:
+    file: apiboot.pid
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+logging:
+  file:
+    path: ./API_Log
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace
+    root: info
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?autoReconnect=true&useUnicode=true?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 1234
+
+server:
+  port: 9440
+{% endhighlight %}
 
 
 
