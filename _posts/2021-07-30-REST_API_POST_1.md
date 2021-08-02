@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Spring Boot] REST API Project - Log4j, Swqgger [1]"
+title: "[Spring Boot] REST API Project - Log4j [1]"
 date: 2021-07-04
-excerpt: "REST API Project - Project 생성, Log4j, Swagger 설정"
+excerpt: "REST API Project - Project 생성, Log4j 설정"
 tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger, Eclipse]
 comments: false
 spring: true
