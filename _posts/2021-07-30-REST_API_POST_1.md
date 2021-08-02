@@ -9,14 +9,15 @@ spring: true
 feature: /assets/img/spring_boot_logo.jpg
 
 ---
+
 # 1. SpringBoot 프로젝트 생성
 
 Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 
 
-<사진>
-
-
-
+<figure>
+	<img src="https://img.insight.co.kr/static/2021/01/10/700/img_20210110130830_kue82l80.webp">
+</figure>
+ 
 
 {% highlight css %} #container { float: left; margin: 0 -240px 0 0; width: 100%; } {% endhighlight %}
 
