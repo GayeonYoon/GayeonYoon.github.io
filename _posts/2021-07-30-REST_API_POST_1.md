@@ -342,5 +342,12 @@ public class LogAspect {
 }
 {% endhighlight %}
 
+
+1) @Aspect<br>
+
+2) @Component<br>
+ 
+3) @Around<br>
+@Around 어드바이스는 앞서 설명한 어드바이스의 기능을 모두 포괄하는 종합선물세트와도 같다. 대상 메써드를 감싸는 느낌으로 실행 전후 시점에 원하는 작업을 할 수 있다. 대상 메써드의 실행 제어 및 리턴 값 가공도 가능하다.
 # 6. 확인
 
