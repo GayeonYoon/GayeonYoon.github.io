@@ -308,11 +308,8 @@ public class LogAspect {
 		// 여기서 찍어주는것.
 		logger.info("{} ====> REQUEST : {}({}) = {}", type, pjp.getSignature().getDeclaringTypeName(),
 				pjp.getSignature().getName(), params);
-
 		Object result = pjp.proceed();
-
 		long endAt = System.currentTimeMillis();
-
 		logger.info("{} ====> RESPONSE : {}({}) = {} ({}ms)", type, pjp.getSignature().getDeclaringTypeName(),
 				pjp.getSignature().getName(), result, endAt - startAt);
 
@@ -329,9 +326,7 @@ public class LogAspect {
 		if (requestAttribute != null) {
 			HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
 					.getRequest();
-
 			Map<String, String[]> paramMap = request.getParameterMap();
-
 			if (!paramMap.isEmpty()) {
 				params = " [" + paramMapToString(paramMap) + "]";
 			}
