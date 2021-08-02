@@ -12,13 +12,12 @@ feature: /assets/img/spring_boot_logo.jpg
 
 # 1. SpringBoot 프로젝트 생성
 
-1. Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 후 <br>
-Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
+##1. Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 후 <br> Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
 <figure>
 	<img src="/assets/img/RestApi_post1.png">
 </figure>
  
-2. Project 생성 완료 후 구조는 아래와같이 나타남.
+##2. Project 생성 완료 후 구조는 아래와같이 나타남.
 <figure>
 	<img src="/assets/img/RestApi_post2.png">
 </figure>
@@ -263,7 +262,7 @@ server:
 * @Aspect, @Component로 AOP가 바라보는 관점을 정의하고 bean으로 등록한다.
 * @Around Advice에서 Pointcut은 within 으로, JoinPonts은 within(com.yoon.api..*) 로 설정한다.<br>
 
-> @Around<br>
+**  @Around<br>
 어느 시점에 적용할 것인지를 정의하는 것<br>
 @Around 어드바이스는 앞서 설명한 어드바이스의 기능을 모두 포괄한다. <br>
 대상 메써드를 감싸는 느낌으로 실행 전후 시점에 원하는 작업을 할 수 있다. 대상 메써드의 실행 제어 및 리턴 값 가공도 가능하다.<br>
