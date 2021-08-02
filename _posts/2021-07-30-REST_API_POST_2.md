@@ -42,7 +42,12 @@ feature: /assets/img/spring_boot_logo.jpg
 {% endhighlight %}
 
 ## 2. SwaggerConfig.java 생성
-(위치: src/main/java/com/yoon/api/config/Swagger.Config.java)
+(위치: src/main/java/com/yoon/api/config/SwaggerConfig.java)
+
+ 1) @ Configuration
+ 2) @ EnableSwagger2	//Swagger2 버전을 활성화 하겠다는 어노테이션
+ 3) @ Profile("dev")  // 백도어방지
+
 
 {% highlight java %}
 package com.yoon.api.config;
