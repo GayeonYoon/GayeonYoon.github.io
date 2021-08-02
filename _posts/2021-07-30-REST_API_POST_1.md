@@ -15,7 +15,7 @@ feature: /assets/img/spring_boot_logo.jpg
 Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 
 
 <figure>
-	<img src="https://img.insight.co.kr/static/2021/01/10/700/img_20210110130830_kue82l80.webp">
+	<img src="/assets/img/RestApi_post1.png">
 </figure>
  
 
