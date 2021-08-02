@@ -36,7 +36,7 @@ feature: /assets/img/bg.jpg
  * Oracle
  * Mysql, MariaDB
  * MS-SQL
- * DBeaver 21.1.1
+ * DBeaver
 <br><br>
 
 ------
