@@ -27,15 +27,13 @@ Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
 > 참고<br>
 1) Spring Boot에서는 기본적으로 "spring-boot-starter-test"를 제공해줌. <br>
  * @SpringBootTest 어노테이션을 통해 스프링부트 어플리케이션 테스트에 필요한 거의 모든 의존성을 제공한다.
- * com/example/demo > RestapiApplication.java 와 RestapiApplicationTests.java 
+ * com/example/demo/RestapiApplication.java 와 RestapiApplicationTests.java 참고
  * 프로젝트 생성 후 Run as 를 하면 바로 실행되는것을 볼 수 있음. 
 2) Gradle 프로젝트로 만들었기때문에 build.gradle 등과 같은 파일들이 생성됨. <br>
 
 3. build.gradle 에서 dependencies 등을 추가함.
- 
-
-
-{% highlight css %} buildscript {
+  
+{% highlight code %} buildscript {
    dependencies {
        classpath("gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:1.0.10")
    }
@@ -151,7 +149,9 @@ compileQuerydsl {
 
 configurations {
     querydsl.extendsFrom compileClasspath
-}{% endhighlight %}
+}
+
+{% endhighlight %}
 
 
 
