@@ -23,7 +23,7 @@ feature: /assets/img/spring_boot_logo.jpg
 # 2. Swagger의 기능
 
 1)<b> API Design (API 설계)</b>: Swagger-editor를 통해 api를 문서화하고 빠르게 명세 가능 <br>
-2)<b> API Development </b>: Swagger-codepen을 통해 작성된 문서를 통해 SDK를 생성하여 <br> 빌드 프로세스를 간소화할 수 있도록 도와준다. <br>
+2)<b> API Development </b>: Swagger-codepen을 통해 작성된 문서를 통해 SDK를 생성하여 <br>&nbsp;&nbsp;&nbsp;&nbsp; 빌드 프로세스를 간소화할 수 있도록 도와준다. <br>
 3)<b> API Documentation </b>: Swagger-UI를 통해 작성된 API를 시각화시켜준다. <br>
 4)<b> API Testing </b>: Swagger-Inspector를 통해 API를 시각화하고 빠른 테스팅을 진행할 수 있다. <br>
 5)<b> Standardize </b>: Swagger-hub를 통해 개인, 팀원들이 API 정보를 공유하는 Hub <br>
