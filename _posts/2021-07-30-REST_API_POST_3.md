@@ -238,13 +238,12 @@ import com.yoon.api.entity.ApiHistoryEntity;
 
 @Repository
 public interface ApiHistoryRepository
-		extends JpaRepository<ApiHistoryEntity, Long>, 
-		QuerydslPredicateExecutor<ApiHistoryEntity> {
+		extends JpaRepository<ApiHistoryEntity, Long>, QuerydslPredicateExecutor<ApiHistoryEntity> {
 
-	Optional<ApiHistoryEntity> findByHistoryKey(
-			@Param("historyKey") String historyKey);
+	Optional<ApiHistoryEntity> findByHistoryKey(@Param("historyKey") String historyKey);
 
 }
+
 {% endhighlight %}
 
 # 7. Repository Support
