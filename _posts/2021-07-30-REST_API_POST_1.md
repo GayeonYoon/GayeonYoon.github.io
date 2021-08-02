@@ -291,22 +291,21 @@ public class LogAspect {
 	public Object logging(ProceedingJoinPoint pjp) throws Throwable {
 
 		String params = getRequestParams();
-
 		String type = "";
 		String name = pjp.getSignature().getDeclaringTypeName();
 
-		// method가 불려오는 이름이 컨트롤러명 타입을 xontroller로 찍고
+		// method가 불려오는 이름이 컨트롤러명 타입을 Controller로 찍고
 		if (name.contains("Controller")) {
 			type = "Controller";
 		} else if (name.contains("Service")) {
 			type = "ServiceImpl";
-		} else if (name.contains("Mapper")) { // mybatis에서만 작동하겠지.
+		} else if (name.contains("Mapper")) {   // mybatis에서만 작동.
 			type = "Mapper";
 		}
 
 		long startAt = System.currentTimeMillis();
 
-		// 요기서 찍어주는것.
+		// 여기서 찍어주는것.
 		logger.info("{} ====> REQUEST : {}({}) = {}", type, pjp.getSignature().getDeclaringTypeName(),
 				pjp.getSignature().getName(), params);
 
@@ -325,7 +324,6 @@ public class LogAspect {
 	private String getRequestParams() {
 
 		String params = "";
-
 		RequestAttributes requestAttribute = RequestContextHolder.getRequestAttributes();
 
 		if (requestAttribute != null) {
