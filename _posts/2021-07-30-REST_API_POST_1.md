@@ -358,3 +358,7 @@ public class LogAspect {
 	<img src="/assets/img/log_confirm.png">
 </figure>
 
+
+
+다음 포스팅에서는 Swagger 설정하기를 해보자 !
+
