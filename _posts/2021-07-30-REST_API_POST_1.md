@@ -243,11 +243,10 @@ server:
     <!-- 프로필별 로깅 -->
     <root level="INFO">
         <springProfile name="dev">
-            <appender-ref ref="STDOUT" />   <!-- 이게 콘솔출력 -->
+            <appender-ref ref="STDOUT" />   <!-- 이게 콘솔출력 / 없으면 콜솔출력 X , log 파일에만 출력. -->
             <appender-ref ref="dailyRollingFileAppender" />
         </springProfile>
         <springProfile name="op">
-        	<appender-ref ref="STDOUT" />   <!-- 이게 콘솔출력 -->
             <appender-ref ref="dailyRollingFileAppender" />
         </springProfile>
     </root>
