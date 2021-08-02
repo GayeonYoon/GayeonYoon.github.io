@@ -258,10 +258,12 @@ server:
 
 # 5. LogAspect.java 파일 생성
 
-(위치 : src/main/java/com/yoon/api/config.LogAspect.java )
+(위치 : src/main/java/com/yoon/api/config.LogAspect.java ) <br>
+* LogAspect.java 에서 <b>공통기능을 정의하고 공통기능이 사용될 시점을 정의</b>한다. <br>
+* @Aspect, @Componet로 AOP가 바라보는 관점을 정의하고 bean으로 등록한다.
+* @Around Advice에서 Pointcut은 within 으로, JoinPonts은 within(com.yoon.api..*) 로 설정한다.
 
 {% highlight java %}
-
 package com.yoon.api.config;
 
 import java.util.Map;
@@ -287,7 +289,7 @@ public class LogAspect {
 
 	private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
 
-	@Around("within(com.yoon.api..*)")
+	@Around("within(com.yoon.api..*)")   // com.yoon.api 패키지 및 하위 패키지의 모든 결합점 (클래스 포함)
 	public Object logging(ProceedingJoinPoint pjp) throws Throwable {
 
 		String params = getRequestParams();
@@ -304,8 +306,6 @@ public class LogAspect {
 		}
 
 		long startAt = System.currentTimeMillis();
-
-		// 여기서 찍어주는것.
 		logger.info("{} ====> REQUEST : {}({}) = {}", type, pjp.getSignature().getDeclaringTypeName(),
 				pjp.getSignature().getName(), params);
 		Object result = pjp.proceed();
@@ -339,6 +339,7 @@ public class LogAspect {
 				.map(entry -> String.format("%s -> (%s)", entry.getKey(), Joiner.on(",").join(entry.getValue())))
 				.collect(Collectors.joining(", "));
 	}
+    
 }
 {% endhighlight %}
 
@@ -348,6 +349,11 @@ public class LogAspect {
 2) @Component<br>
  
 3) @Around<br>
-@Around 어드바이스는 앞서 설명한 어드바이스의 기능을 모두 포괄하는 종합선물세트와도 같다. 대상 메써드를 감싸는 느낌으로 실행 전후 시점에 원하는 작업을 할 수 있다. 대상 메써드의 실행 제어 및 리턴 값 가공도 가능하다.
+어느 시점에 적용할 것인지를 정의하는 것이다.<br>
+@Around 어드바이스는 앞서 설명한 어드바이스의 기능을 모두 포괄하는 종합선물세트와도 같다. <br>
+대상 메써드를 감싸는 느낌으로 실행 전후 시점에 원하는 작업을 할 수 있다. 대상 메써드의 실행 제어 및 리턴 값 가공도 가능하다.<br><br>
+메서드의 실행 전/후에 공통로직을 적용하고 싶을 때 사용하고 @Before는 메서드 실행 전, @After는 메서드 실행 후에 공통 로직을 적용하고 싶을 때 사용함.
+
+ 
 # 6. 확인
 
