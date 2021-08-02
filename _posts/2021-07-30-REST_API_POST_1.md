@@ -33,7 +33,9 @@ Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
 
 # 2. build.gradle 에서 dependencies 등을 추가함.
   
-{% highlight code %} buildscript {
+{% highlight html %}
+{% raw %}
+buildscript {
    dependencies {
        classpath("gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:1.0.10")
    }
@@ -150,8 +152,9 @@ compileQuerydsl {
 configurations {
     querydsl.extendsFrom compileClasspath
 }
-
+{% endraw %}
 {% endhighlight %}
+
 
 
 
