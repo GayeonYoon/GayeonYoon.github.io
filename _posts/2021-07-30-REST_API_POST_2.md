@@ -17,8 +17,8 @@ feature: /assets/img/spring_boot_logo.jpg
 * Springboot에서 Swagger를 사용하면, 컨트롤러에 명시된 어노테이션을 해석하여 API문서를 자동으로 만들어준다.
 * 참고로 Swagger는 Java에 종속된 라이브러리가 아니다.
 * URL에 /swagger-ui.html으로 접근하면 swagger가 만들어주는 페이지에 접근할 수 있다. 
-&nbsp;&nbsp;&nbsp; EX) [http://localhost:9440/swagger-ui.html] http://localhost:9440/swagger-ui.html
-* [https://swagger.io/] https://swagger.io/
+  &nbsp;&nbsp;<br>EX) [http://localhost:9440/swagger-ui.html](http://localhost:9440/swagger-ui.html)
+* [https://swagger.io/](https://swagger.io/)
 
 # 2. Swagger의 기능
 
