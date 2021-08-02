@@ -205,7 +205,9 @@ server:
 * DB는 MySQL 과 DBeaver 사용!
 
 # 4. logback-spring.xml 파일 추가<br>
-(위치 : src/main/resources/logback-spring.xml)
+(위치 : src/main/resources/logback-spring.xml)<br>
+1) application.yml 에서 logging path 를 ./API_LOG 로 설정.
+2) logback-spring.xml 에서 fileNamePattern을 <b>${LOG_PATH}</b>/APIServer_log.%d{yyyy-MM-dd}-%i.log 로 설정.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -251,15 +253,12 @@ server:
     </root>
 </configuration>
 {% endhighlight %}
-
-* application.yml 에서 logging path 를 ./API_LOG 로 설정.
-* logback-spring.xml 에서 fileNamePattern을 <b>${LOG_PATH}</b>/APIServer_log.%d{yyyy-MM-dd}-%i.log 로 설정.
-
+ 
 # 5. LogAspect.java 파일 생성
    (위치 : src/main/java/com/yoon/api/config.LogAspect.java ) <br>
-* LogAspect.java 에서 <b>공통기능을 정의하고 공통기능이 사용될 시점을 정의</b>한다. <br>
-* @Aspect, @Component로 AOP가 바라보는 관점을 정의하고 bean으로 등록한다.
-* @Around Advice에서 Pointcut은 within 으로, JoinPonts은 within(com.yoon.api..*) 로 설정한다.<br>
+1) LogAspect.java 에서 <b>공통기능을 정의하고 공통기능이 사용될 시점을 정의</b>한다. <br>
+2) @Aspect, @Component로 AOP가 바라보는 관점을 정의하고 bean으로 등록한다.<br>
+3) @Around Advice에서 Pointcut은 within 으로, JoinPonts은 within(com.yoon.api..*) 로 설정한다.<br>
  
 {% highlight java %}
 package com.yoon.api.config;
