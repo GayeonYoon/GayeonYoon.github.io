@@ -25,7 +25,7 @@ Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
 
 *** 참고<br>
 1) Spring Boot에서는 기본적으로 "spring-boot-starter-test"를 제공해줌. <br>
- * @SpringBootTest 어노테이션을 통해 스프링부트 어플리케이션 테스트에 필요한 거의 모든 의존성을 제공한다.<br>
+ * @SpringBootTest 를 통해 스프링부트 어플리케이션 테스트에 필요한 거의 모든 의존성을 제공한다.<br>
  * com/example/demo/RestapiApplication.java 와 RestapiApplicationTests.java 참고<br>
  * 프로젝트 생성 후 Run as 를 하면 바로 실행되는것을 볼 수 있음. <br>
 
@@ -175,6 +175,7 @@ spring:
       prefix: /WEB-INF/views/
       suffix: .jsp
 
+#log4j 설정 
 logging:
   file:
     path: ./API_Log
