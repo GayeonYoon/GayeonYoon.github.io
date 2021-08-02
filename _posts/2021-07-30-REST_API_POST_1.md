@@ -2,7 +2,7 @@
 layout: post
 title: "[Spring Boot] REST API Project [1]"
 date: 2021-07-04
-excerpt: "REST API Project - 설정"
+excerpt: "REST API Project - Project 생성, Log4j 설정"
 tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger, Eclipse]
 comments: false
 spring: true
@@ -203,11 +203,56 @@ server:
 {% endhighlight %}
 
 
-* DB는 DBeaver 21.1.1 사용!
+* DB는 MySQL 과 DBeaver 사용!
 
+# 4. logback-spring.xml 파일 추가<br>
+(위치 : src/main/resources/logback-spring.xml)
 
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 콘솔에 로그 출력 --> 
+    <appender name="STDOUT"
+        class="ch.qos.logback.core.ConsoleAppender">  
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyyMMdd HH:mm:ss.SSS} [%thread] %-3level %logger{5} - %msg %n</pattern>
+        </encoder>
+    </appender>
 
-
+    <!-- 로그 파일 생성 root/spring.log/~~ -->
+    <appender name="dailyRollingFileAppender"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy
+            class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/APIServer_log.%d{yyyy-MM-dd}-%i.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-3level %logger{5} - %msg %n
+            </pattern>
+        </encoder>
+    </appender>
+ 
+    <!-- 프로필별 로깅 -->
+    <root level="INFO">
+        <springProfile name="dev">
+            <appender-ref ref="STDOUT" />   <!-- 이게 콘솔출력 -->
+            <appender-ref ref="dailyRollingFileAppender" />
+        </springProfile>
+        <springProfile name="op">
+        	<appender-ref ref="STDOUT" />   <!-- 이게 콘솔출력 -->
+            <appender-ref ref="dailyRollingFileAppender" />
+        </springProfile>
+    </root>
+</configuration>
+{% endhighlight %}
 
 
  
