@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Spring Boot] REST API Project - Swagger [1]"
+title: "[Spring Boot] REST API Project [2] - Swagger"
 date: 2021-07-04
 excerpt: "REST API Project - Swagger 설정"
 tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger, Eclipse]
