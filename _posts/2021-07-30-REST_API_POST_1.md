@@ -350,12 +350,12 @@ public class LogAspect {
  
 # 6. Log 파일 확인
 
-1. Project 아래에 API_Log 폴더 생성된 후 하위로 날짜별 log 파일 생성된것 확인.
+1) Project 아래에 API_Log 폴더 생성된 후 하위로 날짜별 log 파일 생성된것 확인.
 <figure>
 	<img src="/assets/img/log_directory.png">
 </figure>
 
-2. .log 파일 내용 확인
+2) .log 파일 내용 확인
 <figure>
 	<img src="/assets/img/log_confirm.png">
 </figure>
