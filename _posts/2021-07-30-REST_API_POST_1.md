@@ -12,12 +12,12 @@ feature: /assets/img/spring_boot_logo.jpg
 
 # 1. SpringBoot 프로젝트 생성
 
-## 1. Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 후 <br> Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
+1. Eclipse 실행 후 File > New > Other > Spring Boot > Spring Starter Project 클릭 후 <br> Project <b>Name</b> 입력, Type은 <b>Gradle</b>로 선택.
 <figure>
 	<img src="/assets/img/RestApi_post1.png">
 </figure>
  
-## 2. Project 생성 완료 후 구조는 아래와같이 나타남.
+2. Project 생성 완료 후 구조는 아래와같이 나타남.
 <figure>
 	<img src="/assets/img/RestApi_post2.png">
 </figure>
