@@ -253,7 +253,7 @@ server:
 </configuration>
 {% endhighlight %}
 
-* 이전에 application.yml 에서 logging path 를 ./API_LOG 로 설정.
+* application.yml 에서 logging path 를 ./API_LOG 로 설정.
 * logback-spring.xml 에서 fileNamePattern을 <b>${LOG_PATH}</b>/APIServer_log.%d{yyyy-MM-dd}-%i.log 로 설정.
 
  
