@@ -84,7 +84,7 @@ public class SwaggerConfig {
  
 # 6. Swagger UI 확인
 
-1) http://localhost:9440/swagger-ui.html 링크
+1) http://localhost:9440/swagger-ui.html 링크로 접속해보자 
 <figure>
 	<img src="/assets/img/swagger-ui.png">
 </figure>
