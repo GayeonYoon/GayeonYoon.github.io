@@ -255,7 +255,7 @@ server:
 {% endhighlight %}
  
 # 5. LogAspect.java 파일 생성
-   (위치 : src/main/java/com/yoon/api/config.LogAspect.java ) <br>
+   (위치 : src/main/java/com/yoon/api/config.LogAspect.java ) <br><br>
 1) LogAspect.java 에서 <b>공통기능을 정의하고 공통기능이 사용될 시점을 정의</b>한다. <br>
 2) @ Aspect, @ Component로 AOP가 바라보는 관점을 정의하고 bean으로 등록한다.<br>
 3) @ Around Advice에서 Pointcut은 within 으로, JoinPonts은 within(com.yoon.api..*) 로 설정한다.<br>
