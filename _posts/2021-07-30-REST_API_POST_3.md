@@ -334,8 +334,8 @@ public class ApiHistoryServiceImpl implements ApiHistoryService {
 	private ApiHistoryRepository apiHistoryRepo;
 
 	@Autowired
-	private ApiHistoryRepositorySupport apiHistoryRepoSupport;   //jpaQueryFactory를 생성자로 저장.
-
+	private ApiHistoryRepositorySupport apiHistoryRepoSupport;  
+    
 	@Override
 	public boolean createHistory(ApiHistoryEntity apiHistoryParam) {
 		apiHistoryRepo.save(apiHistoryParam);
@@ -345,7 +345,7 @@ public class ApiHistoryServiceImpl implements ApiHistoryService {
 
 	@Override
 	public ApiHistoryEntity readHistory(String historyKeyParam) {
-		//findByHistoryKey() return=>Optional<ApiHistoryEntity>
+		//findByHistoryKey() return => Optional<ApiHistoryEntity>
 		// orElse => NPE. Exception을 처리해줘. 발생하지않음. 필요할땐 get() 사용해.
 		ApiHistoryEntity result = apiHistoryRepo.findByHistoryKey(historyKeyParam).orElse(new ApiHistoryEntity());
 		logger.info(result.toString());
