@@ -256,7 +256,7 @@ server:
 * logback-spring.xml 에서 fileNamePattern을 <b>${LOG_PATH}</b>/APIServer_log.%d{yyyy-MM-dd}-%i.log 로 설정.
 
 # 5. LogAspect.java 파일 생성
-(위치 : src/main/java/com/yoon/api/config.LogAspect.java ) <br>
+   (위치 : src/main/java/com/yoon/api/config.LogAspect.java ) <br>
 * LogAspect.java 에서 <b>공통기능을 정의하고 공통기능이 사용될 시점을 정의</b>한다. <br>
 * @Aspect, @Component로 AOP가 바라보는 관점을 정의하고 bean으로 등록한다.
 * @Around Advice에서 Pointcut은 within 으로, JoinPonts은 within(com.yoon.api..*) 로 설정한다.<br>
@@ -341,7 +341,7 @@ public class LogAspect {
 }
 {% endhighlight %}
  
-#### @ Around <br>
+#### @ Around
 * 어느 시점에 적용할 것인지를 정의하는 것.
 * @Around 어드바이스는 앞서 설명한 어드바이스의 기능을 모두 포괄한다.
 * 대상 메써드를 감싸는 느낌으로 실행 전후 시점에 원하는 작업을 할 수 있다. 대상 메써드의 실행 제어 및 리턴 값 가공도 가능하다.
