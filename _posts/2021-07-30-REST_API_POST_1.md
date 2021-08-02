@@ -154,7 +154,9 @@ configurations {
 {% endhighlight %}
 
 
-# 3. src/main/resources/application.properties 를 application.yml로 변경.
+# 3. application.properties 를 application.yml로 변경.<br>
+(src/main/resources/application.properties)
+
 {% highlight yml %}
 spring:
   profiles:
