@@ -232,7 +232,7 @@ public class ApiHistoryEntity {
 바로 위에서 만든 @Entity 를 읽어 필요한 Q Class File 들을 미리 만들어 두는것!<br>
 이렇게 만들어진 Q class file(이하 Q 파일)들은 쿼리를 type safe하게 짤 수 있도록 도와주기 때문이다. <br> 
 
-* Q Class File 만드는방법
+[ Q Class File 만드는방법 ] <br>
   * 1) Gradle Tasks 에서 Project 클릭 -> build 우클릭 -> Run Gradle Tasks 후 Project Refresh 
 <figure>
 	<img src="/assets/img/Gradle_Tasks.png">
