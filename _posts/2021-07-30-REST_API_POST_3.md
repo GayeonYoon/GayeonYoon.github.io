@@ -34,7 +34,12 @@ public class RestapiApplication {
 } 
 {% endhighlight %}
 
-# 2. Config
+# 2. Config 
+1) @PersistenceContext 
+* Entity를 영구 저장하는 환경으로, 논리적인 개념이다.
+* Entity Manager로 Entity를 저장(persist()), 조회(find() 또는 JPQL, QueryDSL)하면 Entity Manager는 그 Entity를 영속성 컨테스트에 보관하고 관리한다.
+* Entity의 @Id 필드를 이용하여 Entity를 식별한다.
+* 쓰기 지연 기능이 있음. 즉 값을 변경하자마자 바로 DB에 반영하는게 아닌, SQL 저장소에 쿼리들을 저장해뒀다가 Entity Manager가 commit()을 호출하면 그때 DB에 반영된다. => flush
 
 {% highlight java %}  
 package com.yoon.api.config;
