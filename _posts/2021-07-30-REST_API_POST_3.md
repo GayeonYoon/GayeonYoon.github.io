@@ -393,3 +393,4 @@ public class ApiHistoryServiceImpl implements ApiHistoryService {
      
 참고 
 * https://victorydntmd.tistory.com/207
+* https://noep.github.io/2017/05/03/springboot-querydsl/
