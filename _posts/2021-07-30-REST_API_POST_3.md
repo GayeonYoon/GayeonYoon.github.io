@@ -9,8 +9,7 @@ spring: true
 feature: /assets/img/spring_boot_logo.jpg
 
 ---
-
-log 와 Swqgger 설정이 완료됐으니 본격적으로 REST API 를 들어가보자 !
+이제 Log 와 Swqgger 설정이 완료됐으니 본격적으로 REST API Project를 만들어보자.
 
 
 # 1. Application
