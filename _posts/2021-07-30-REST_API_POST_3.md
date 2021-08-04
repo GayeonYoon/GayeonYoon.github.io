@@ -13,7 +13,7 @@ feature: /assets/img/spring_boot_logo.jpg
 log 와 Swqgger 설정이 완료됐으니 본격적으로 REST API 를 들어가보자 !
 
 
-# 1. Application (RestapiApplication.java)
+# 1. Application
 {% highlight java %}  
 package com.yoon.api;
 
@@ -34,7 +34,7 @@ public class RestapiApplication {
 } 
 {% endhighlight %}
 
-# 2. Config (QuerydslConfig.java)
+# 2. Config
 1) @PersistenceContext 
 * Entity를 영구 저장하는 환경으로, 논리적인 개념이다.
 * Entity Manager로 Entity를 저장(persist()), 조회(find() 또는 JPQL, QueryDSL)하면 Entity Manager는 그 Entity를 영속성 컨테스트에 보관하고 관리한다.
@@ -65,7 +65,7 @@ public class QuerydslConfig {
 }
 {% endhighlight %}
 
-# 3. Controller (ApiHistoryController.java)
+# 3. Controller
 
 {% highlight java %}  
 package com.yoon.api.controller;
@@ -153,7 +153,7 @@ public class ApiHistoryController {
 }
 {% endhighlight %}
 
-# 4. Dto (CommonResponseDto.java)
+# 4. Dto
 {% highlight java %}  
  package com.yoon.api.dto;
 
@@ -171,7 +171,7 @@ public class CommonResponseDto {
 {% endhighlight %}
 
 
-# 5. Entity (ApiHistoryEntity.java)
+# 5. Entity
 {% highlight java %}  
 package com.yoon.api.entity;
 
@@ -227,8 +227,27 @@ public class ApiHistoryEntity {
 }
  
 {% endhighlight %}
+    
+# * Q Class 파일 생성하기
+우리는 QueryDSL의 내부동작을 완벽하게 알지는 못하지만, 사용하기 전 전처리과정이 필요하다. <br>
+바로 위에서 만든 @Entity 를 읽어 필요한 Q Class File 들을 미리 만들어 두는것!<br>
+이렇게 만들어진 Q class file(이하 Q 파일)들은 쿼리를 type safe하게 짤 수 있도록 도와주기 때문이다. <br> 
 
-# 6. Repository (ApiHistoryRepository.java)
+* Q Class File 만드는방법
+  * 1) Gradle Tasks 에서 Project 클릭 -> build 우클릭 -> Run Gradle Tasks 후 Project Refresh 
+<figure>
+	<img src="/assets/img/Gradle_Tasks.png">
+</figure>
+    
+  * 2) Q Class File 위치 확인하기 
+<figure>
+	<img src="/assets/img/QClass.png">
+</figure>
+    
+    
+    
+    
+# 6. Repository
 {% highlight java %}  
 package com.yoon.api.repository;
 
@@ -251,7 +270,7 @@ public interface ApiHistoryRepository
 
 {% endhighlight %}
 
-# 7. Repository Support (ApiHistoryRepositorySupport.java)
+# 7. Repository Support
 {% highlight java %}  
 package com.yoon.api.repository.support;
  
@@ -294,7 +313,7 @@ public class ApiHistoryRepositorySupport extends QuerydslRepositorySupport {
 }  
 {% endhighlight %}
 
-# 8. Service (ApiHistoryService.java)
+# 8. Service
 {% highlight java %}  
 package com.yoon.api.service;
 
@@ -311,7 +330,7 @@ public interface ApiHistoryService {
 
 {% endhighlight %}
   
-# 9. Service Impl (ApiHistoryServiceImpl.java)
+# 9. Service Impl
 {% highlight java %}  
 package com.yoon.api.service.impl;
 
