@@ -13,7 +13,7 @@ feature: /assets/img/spring_boot_logo.jpg
 log 와 Swqgger 설정이 완료됐으니 본격적으로 REST API 를 들어가보자 !
 
 
-# 1. Application (class RestapiApplication.java)
+# 1. Application (RestapiApplication.java)
 {% highlight java %}  
 package com.yoon.api;
 
@@ -34,7 +34,7 @@ public class RestapiApplication {
 } 
 {% endhighlight %}
 
-# 2. Config (class QuerydslConfig.java)
+# 2. Config (QuerydslConfig.java)
 1) @PersistenceContext 
 * Entity를 영구 저장하는 환경으로, 논리적인 개념이다.
 * Entity Manager로 Entity를 저장(persist()), 조회(find() 또는 JPQL, QueryDSL)하면 Entity Manager는 그 Entity를 영속성 컨테스트에 보관하고 관리한다.
@@ -65,7 +65,7 @@ public class QuerydslConfig {
 }
 {% endhighlight %}
 
-# 3. Controller (class ApiHistoryController.java)
+# 3. Controller (ApiHistoryController.java)
 
 {% highlight java %}  
 package com.yoon.api.controller;
@@ -153,7 +153,7 @@ public class ApiHistoryController {
 }
 {% endhighlight %}
 
-# 4. Dto (class CommonResponseDto.java)
+# 4. Dto (CommonResponseDto.java)
 {% highlight java %}  
  package com.yoon.api.dto;
 
@@ -171,7 +171,7 @@ public class CommonResponseDto {
 {% endhighlight %}
 
 
-# 5. Entity (class ApiHistoryEntity.java)
+# 5. Entity (ApiHistoryEntity.java)
 {% highlight java %}  
 package com.yoon.api.entity;
 
@@ -228,7 +228,7 @@ public class ApiHistoryEntity {
  
 {% endhighlight %}
 
-# 6. Repository (interface ApiHistoryRepository.java)
+# 6. Repository (ApiHistoryRepository.java)
 {% highlight java %}  
 package com.yoon.api.repository;
 
@@ -251,7 +251,7 @@ public interface ApiHistoryRepository
 
 {% endhighlight %}
 
-# 7. Repository Support (class ApiHistoryRepositorySupport.java)
+# 7. Repository Support (ApiHistoryRepositorySupport.java)
 {% highlight java %}  
 package com.yoon.api.repository.support;
  
@@ -294,7 +294,7 @@ public class ApiHistoryRepositorySupport extends QuerydslRepositorySupport {
 }  
 {% endhighlight %}
 
-# 8. Service (interface ApiHistoryService.java)
+# 8. Service (ApiHistoryService.java)
 {% highlight java %}  
 package com.yoon.api.service;
 
@@ -311,7 +311,7 @@ public interface ApiHistoryService {
 
 {% endhighlight %}
   
-# 9. Service Impl (class ApiHistoryServiceImpl.java)
+# 9. Service Impl (ApiHistoryServiceImpl.java)
 {% highlight java %}  
 package com.yoon.api.service.impl;
 
