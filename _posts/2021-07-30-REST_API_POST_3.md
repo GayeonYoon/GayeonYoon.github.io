@@ -38,7 +38,7 @@ public class RestapiApplication {
 * Entity를 영구 저장하는 환경으로, 논리적인 개념이다.
 * Entity Manager로 Entity를 저장(persist()), 조회(find() 또는 JPQL, QueryDSL)하면 Entity Manager는 그 Entity를 영속성 컨테스트에 보관하고 관리한다.
 * Entity의 @Id 필드를 이용하여 Entity를 식별한다.
-* 쓰기 지연 기능이 있음. 즉 값을 변경하자마자 바로 DB에 반영하는게 아닌, SQL 저장소에 쿼리들을 저장해뒀다가 Entity Manager가 commit()을 호출하면 그때 DB에 반영된다. => flush
+* 쓰기 지연 기능이 있음. 즉 값을 변경하자마자 바로 DB에 반영하는게 아닌, SQL 저장소에 쿼리들을 저장해뒀다가 Entity Manager가 commit()을 호출하면 그때 DB에 반영(flush)된다.
 
 {% highlight java %}  
 package com.yoon.api.config;
@@ -94,20 +94,15 @@ import io.swagger.annotations.ApiOperation;
 //import lombok.RequiredArgsConstructor;
 
 @RestController
-@Api(tags = { "1.Api_History" }) //해당클래스가 Swagger 리소스라는 것을 명시함. swagger 세팅. 주소뒤에붙음 ex) https://localhost:9443/swagger-ui.html#/1.Api_History
+@Api(tags = { "1.Api_History" }) //해당 클래스가 Swagger 리소스라는 것을 명시함(swagger 세팅). 주소 확인하기 ex) https://localhost:9443/swagger-ui.html#/1.Api_History
 @RequestMapping("/api/v1/history")
-//@RequiredArgsConstructor  
 public class ApiHistoryController {
 
    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
    @Autowired
    private ApiHistoryService apiHistoryService;
-   
- //ApiHistoryService 에서 @RequiredArgsConstructor 를 사용할 경우
-// Bean이 올라갈때 apiHistoryService를 @Autowired를 쓰지않고 static으로 선언해도 써도돼.
-// final을 꼭 사용할것!! private final ApiHistoryService apiHistoryService;
-    
+
    // Create => POST Method
    @ApiOperation(value = "History 생성", notes = "History 내역을 기록한다.")
    @PostMapping("/create")
@@ -227,7 +222,7 @@ public class ApiHistoryEntity {
  
 {% endhighlight %}
     
-# * Q Class 파일 생성하기
+# * Q Class File 생성하기
 우리는 QueryDSL의 내부동작을 완벽하게 알지는 못하지만, 사용하기 전 전처리과정이 필요하다. <br>
 바로 위에서 만든 @Entity 를 읽어 필요한 Q Class File 들을 미리 만들어 두는것!<br>
 이렇게 만들어진 Q class file(이하 Q 파일)들은 쿼리를 type safe하게 짤 수 있도록 도와주기 때문이다. <br> 
@@ -238,15 +233,20 @@ public class ApiHistoryEntity {
 	<img src="/assets/img/Gradle_Tasks.png">
 </figure>
     
-  * 2) Q Class File 위치 확인하기 
+  * 2) Q Class File이 생성됐는지 위치 확인하기 (src/main/generated)
 <figure>
 	<img src="/assets/img/QClass.png">
 </figure>
     
-    
-    
-    
+     
 # 6. Repository
+1) Optional<T>
+ * null이 올 수 있는 값을 감싸는 Wrapper 클래스. 
+ * 즉, NPE(NullPointerException)로부터 자유로워지기 위해 나온 Wrapper 클래스.
+ * 메소드의 반환 값이 절대 null이 아니라면 Optional을 사용하지 않는 것이 성능저하가 적다.
+ * 한마디로, Optional은 method의 결과가 null이 될 수 있으며, 클라이언트가 이 상황을 처리해야 할 때 사용하는 것이 좋다.
+ * 보통 JpaRepository를 상속받은 Repository는 default return type이 Optional이다. 
+  
 {% highlight java %}  
 package com.yoon.api.repository;
 
@@ -260,8 +260,7 @@ import org.springframework.stereotype.Repository;
 import com.yoon.api.entity.ApiHistoryEntity;
 
 @Repository
-public interface ApiHistoryRepository
-		extends JpaRepository<ApiHistoryEntity, Long>, QuerydslPredicateExecutor<ApiHistoryEntity> {
+public interface ApiHistoryRepository extends JpaRepository<ApiHistoryEntity, Long>, QuerydslPredicateExecutor<ApiHistoryEntity> {
 
 	Optional<ApiHistoryEntity> findByHistoryKey(@Param("historyKey") String historyKey);
 
@@ -270,6 +269,8 @@ public interface ApiHistoryRepository
 {% endhighlight %}
 
 # 7. Repository Support
+1) Querydsl을 이용하여 실제 조회할 쿼리를 작성하는 클래스를 작성한다. 
+
 {% highlight java %}  
 package com.yoon.api.repository.support;
  
@@ -282,12 +283,10 @@ import com.yoon.api.entity.ApiHistoryEntity;
 import java.time.LocalDateTime; 
 import javax.transaction.Transactional;
 
-import static com.yoon.api.entity.QApiHistoryEntity.apiHistoryEntity;   //Querydsl 을 사용하기위한  Q Class!! 
-
-
+import static com.yoon.api.entity.QApiHistoryEntity.apiHistoryEntity;   //static으로 정의. Querydsl 을 사용하기위한  Q Class!! 
+ 
 @Repository
 public class ApiHistoryRepositorySupport extends QuerydslRepositorySupport {
-//Querydsl을 이용하여 실제 조회할 쿼리를 작성하는 클래스
 	
 	private final JPAQueryFactory jpaQueryFactory;  //QuerydslConfig 에서 @Bean으로 등록.
 
@@ -364,9 +363,7 @@ public class ApiHistoryServiceImpl implements ApiHistoryService {
 	}
 
 	@Override
-	public ApiHistoryEntity readHistory(String historyKeyParam) {
-		//findByHistoryKey() return => Optional<ApiHistoryEntity>
-		// orElse => NPE. Exception을 처리해줘. 발생하지않음. 필요할땐 get() 사용해.
+	public ApiHistoryEntity readHistory(String historyKeyParam) { 
 		ApiHistoryEntity result = apiHistoryRepo.findByHistoryKey(historyKeyParam).orElse(new ApiHistoryEntity());
 		logger.info(result.toString()); 
 		return result;
@@ -387,9 +384,7 @@ public class ApiHistoryServiceImpl implements ApiHistoryService {
 }
 {% endhighlight %}
  
-
  
-    
      
 참고 
 * https://victorydntmd.tistory.com/207
