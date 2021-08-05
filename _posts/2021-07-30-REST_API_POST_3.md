@@ -269,7 +269,7 @@ public interface ApiHistoryRepository extends JpaRepository<ApiHistoryEntity, Lo
 {% endhighlight %}
 
 # 7. Repository Support
-1) Querydsl을 이용하여 실제 조회할 쿼리를 작성하는 클래스를 작성한다. 
+* Querydsl을 이용하여 실제 조회할 쿼리를 작성하는 클래스를 작성한다. 
 
 {% highlight java %}  
 package com.yoon.api.repository.support;
