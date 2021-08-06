@@ -132,25 +132,25 @@ function proc()
 	}
                       
 	$config = array(
-			'dbjob'=>$dbjob,
-			'table'=>'mpl_inquiry',
+	'dbjob'=>$dbjob,
+	'table'=>'mpl_inquiry',
 	);
 
 	$msg = '등록되었습니다.'; 
 	$config['data'] = array(
-				'name' => $name, 
-				'hp' => $hp,
-				'email' => $email,
-				'content' => $content,
-				'regist_date'=> date("Y-m-d H:i",time()),
+		'name' => $name, 
+		'hp' => $hp,
+		'email' => $email,
+		'content' => $content,
+		'regist_date'=> date("Y-m-d H:i",time()),
 	);
  
 	$data = array(
-				'name' => $name, 
-				'hp' => $hp,
-				'email' => $email,
-				'content' => $content,
-				'regist_date'=> date("Y-m-d H:i",time()),
+		'name' => $name, 
+		'hp' => $hp,
+		'email' => $email,
+		'content' => $content,
+		'regist_date'=> date("Y-m-d H:i",time()),
 	); 
 
 	$this->common_model->_proc($config);    // insert 부분 
@@ -162,11 +162,11 @@ function proc()
 
 	unset($config);
 	$config = array(
-			'subject'=>$subject,
-			'to'=>$to,
-			'from'=>'test@test.com',
-			// 'template'=>'subscribe.html',
-			'data'=>array('CATEGORY'=> $subject,'EMAIL'=>$email, 'TITLE'=>$title, 'CONTENT'=> nl2br($content)), 
+		'subject'=>$subject,
+		'to'=>$to,
+		'from'=>'test@test.com',
+		// 'template'=>'subscribe.html',
+		'data'=>array('CATEGORY'=> $subject,'EMAIL'=>$email, 'TITLE'=>$title, 'CONTENT'=> nl2br($content)), 
 	);
 	send_mail($config);
 	  
