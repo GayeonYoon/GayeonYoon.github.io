@@ -132,14 +132,14 @@ function proc()
 	}
                       
 	$config = array(
-	    'dbjob'=>$dbjob,
-	    'table'=>'mpl_inquiry',
+	     'dbjob'=>$dbjob,
+	     'table'=>'mpl_inquiry',
 	);
 
 	$msg = '등록되었습니다.'; 
 	$config['data'] = array(
 		    'name' => $name, 
-	    	'hp' => $hp,
+	        'hp' => $hp,
 		    'email' => $email,
 		    'content' => $content,
 		    'regist_date'=> date("Y-m-d H:i",time()),
