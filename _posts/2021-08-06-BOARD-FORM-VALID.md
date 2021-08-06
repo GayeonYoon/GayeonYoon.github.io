@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[PHP] BOARD form과 입력값 검증하기 "
+title: "[PHP] BOARD Form & 입력값 검증하기 "
 date: 2021-08-06
-excerpt: "Mail 전송하기"
-tags: [PHP, JavaScript, formValid]
+excerpt: "Form & 입력값 검증하기"
+tags: [PHP, JavaScript, formValid, Codeigniter, Mail, 유동변수, 메일]
 comments: false
 php: true
 feature: /assets/img/php_logo.jpg
