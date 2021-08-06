@@ -146,17 +146,19 @@ function proc()
 
 	$msg = '등록되었습니다.'; 
 	$config['data'] = array(
-							'name' => $name, 
+			'name' => $name, 
 			'hp' => $hp,
-							'email' => $email,
+			'email' => $email,
 			'content' => $content,
-							'regist_date'=> date("Y-m-d H:i",time()),
+			'regist_date'=> date("Y-m-d H:i",time()),
 	);
 	 
 	$data = array(
-				'name' => $name,
-				'email' => $email,  
-				'regist_date'=> date("Y-m-d H:i",time()),
+			'name' => $name, 
+			'hp' => $hp,
+			'email' => $email,
+			'content' => $content,
+			'regist_date'=> date("Y-m-d H:i",time()),
 	); 
 
 	$this->common_model->_proc($config);    // insert 부분 
@@ -169,7 +171,7 @@ function proc()
 	$config=array(
 		'subject'=>$subject,
 		'to'=>$to,
-	  'from'=>'test@test.com',
+		'from'=>'test@test.com',
 		// 'template'=>'subscribe.html',
 		'data'=>array('CATEGORY'=> $subject,'EMAIL'=>$email, 'TITLE'=>$title, 'CONTENT'=> nl2br($content)), 
 	);
@@ -177,5 +179,5 @@ function proc()
 	  
 	jalert($msg, '/'); 
 }
-
+    
 {% endhighlight %}
