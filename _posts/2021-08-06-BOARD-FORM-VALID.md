@@ -106,16 +106,17 @@ function frmValid(){
 
 # 2. Controller (DB Insert, Codeigniter Mail)
 {% highlight php %}
+
 function proc()
 {
-		$dbjob = $this->input->post('dbjob',true);	
-		$name = $this->input->post('name',true);	
-    $hp = $this->input->post('hp',true);	
-		$email = $this->input->post('email',true);	 
-    $wr_1 = $this->input->post('wr_1',true);	 
-    $wr_2 = $this->input->post('wr_2',true);	 
-    $wr_3 = $this->input->post('wr_3',true);	 
-    $wr_4 = $this->input->post('wr_4',true);	 
+	$dbjob = $this->input->post('dbjob',true);	
+	$name = $this->input->post('name',true);	
+	$hp = $this->input->post('hp',true);	
+	$email = $this->input->post('email',true);	 
+	$wr_1 = $this->input->post('wr_1',true);	 
+	$wr_2 = $this->input->post('wr_2',true);	 
+	$wr_3 = $this->input->post('wr_3',true);	 
+	$wr_4 = $this->input->post('wr_4',true);	 
     
     $tmp_array = array($wr_1, $wr_2, $wr_3, $wr_4);
     for($i=0; $i<count($tmp_array); $i++){
@@ -123,57 +124,58 @@ function proc()
            $content_array[] = $tmp_array[$i]; 
         }
      }
-   $content = '';                             
-   $content = implode( ' / ', $content_array );
-   
-   // 유동변수 필수값 체크하기                          
-   $chk_array = array('name', 'hp', 'email');
-   foreach($chk_array as $k => $v)
-   {  
-      if(!${$v})
-      {
-        echo '{"result_code":"05","result_msg":"변수오류"}';
-        exit;
-      } 
-   }
-                      
-		$config = array( 
-						'dbjob'=>$dbjob,
-						'table'=>'mpl_inquiry',
-		);
- 
-		$msg = '등록되었습니다.'; 
-		$config['data'] = array(
-								'name' => $name, 
-                'hp' => $hp,
-								'email' => $email,
-                'content' => $content,
-								'regist_date'=> date("Y-m-d H:i",time()),
-		);
-  		 
-		$data = array(
-					'name' => $name,
-					'email' => $email,  
-					'regist_date'=> date("Y-m-d H:i",time()),
-		); 
 
-		$this->common_model->_proc($config);    // insert 부분 
+	$content = '';                             
+	$content = implode( ' / ', $content_array );
 
-
- 		//메일발송 
-		$subject = '메일 제목입니다.';  
-		$to = '1226betty@naver.com'; 
-		$content = '메일 내용 입니다.';
-		unset($config);
-		$config=array(
-			'subject'=>$subject,
-			'to'=>$to,
-		  'from'=>'test@test.com',
-			// 'template'=>'subscribe.html',
-			'data'=>array('CATEGORY'=> $subject,'EMAIL'=>$email, 'TITLE'=>$title, 'CONTENT'=> nl2br($content)), 
-		);
-		send_mail($config);
-		  
-		jalert($msg, '/'); 
+	// 유동변수 필수값 체크하기                          
+	$chk_array = array('name', 'hp', 'email');
+	foreach($chk_array as $k => $v)
+	{  
+	  if(!${$v})
+	  {
+		echo '{"result_code":"05","result_msg":"변수오류"}';
+		exit;
+	  } 
 	}
+                      
+	$config = array( 
+					'dbjob'=>$dbjob,
+					'table'=>'mpl_inquiry',
+	);
+
+	$msg = '등록되었습니다.'; 
+	$config['data'] = array(
+							'name' => $name, 
+			'hp' => $hp,
+							'email' => $email,
+			'content' => $content,
+							'regist_date'=> date("Y-m-d H:i",time()),
+	);
+	 
+	$data = array(
+				'name' => $name,
+				'email' => $email,  
+				'regist_date'=> date("Y-m-d H:i",time()),
+	); 
+
+	$this->common_model->_proc($config);    // insert 부분 
+ 
+	//메일발송 
+	$subject = '메일 제목입니다.';  
+	$to = '1226betty@naver.com'; 
+	$content = '메일 내용 입니다.';
+	unset($config);
+	$config=array(
+		'subject'=>$subject,
+		'to'=>$to,
+	  'from'=>'test@test.com',
+		// 'template'=>'subscribe.html',
+		'data'=>array('CATEGORY'=> $subject,'EMAIL'=>$email, 'TITLE'=>$title, 'CONTENT'=> nl2br($content)), 
+	);
+	send_mail($config);
+	  
+	jalert($msg, '/'); 
+}
+
 {% endhighlight %}
