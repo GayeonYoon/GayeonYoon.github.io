@@ -136,7 +136,7 @@ function proc()
 		'table'=>'mpl_inquiry',
 	);
 
-	$msg = '등록되었습니다.'; 
+	$msg = '등록되었습니다!'; 
 	$config['data'] = array(
 			'name' => $name, 
 			'hp' => $hp,
