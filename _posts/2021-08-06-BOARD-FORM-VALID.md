@@ -12,40 +12,41 @@ feature: /assets/img/php_logo.jpg
 
 # 1. View
 {% highlight php %}
+
 <div class="boardForm">
-    <form name="frm" method="post" action="/front/proc">
-		<input type="hidden" name="dbjob" value="i" />
+	<form name="frm" method="post" action="/front/proc">
+	<input type="hidden" name="dbjob" value="i" />
 		<div class="inputbox">
-			
+
 			<input type="text" id="name" name="name" placeholder="이름" /> 
 
-            <input type="text" id="hp" name="hp"  maxlength="11" placeholder="번호" required="">
-            <!--<input type="tel" id="hp" name="hp"  placeholder="번호" maxlength="11" /> 번호만 입력가능--> 
-			
-			<input type="text"  id="email" name="email" placeholder="이메일"/>
-        
-            <div class="checkbox-custom checkbox-default">
-                <input type="checkbox" id="chk_content" name="wr_1" value="A 프로그램 문의">
-                <label for="chk1">A 프로그램 문의</label>
-            </div>
-            <div class="checkbox-custom checkbox-default">
-                <input type="checkbox" id="chk_content" name="wr_2" value="B 제품 문의">
-                <label for="chk2">B 제품 문의</label>
-            </div>
-            <div class="checkbox-custom checkbox-default">
-                <input type="checkbox" id="chk_content" name="wr_3" value="C 행사 문의">
-                <label for="chk3">C 행사 문의</label>
-            </div>
-            <div class="checkbox-custom checkbox-default">
-                <input type="checkbox" id="chk_content" name="wr_4" value="D 기타 문의">
-                <label for="chk4">D 기타 문의</label>
-            </div>
+			<input type="text" id="hp" name="hp"  maxlength="11" placeholder="번호" required="">
+			<!--<input type="tel" id="hp" name="hp"  placeholder="번호" maxlength="11" /> 번호만 입력가능--> 
 
-            <input type="checkbox" name="agree"  id="agree" placeholder="개인정보수집 및 이용안내"/>
+			<input type="text"  id="email" name="email" placeholder="이메일"/>
+
+			<div class="checkbox-custom checkbox-default">
+				<input type="checkbox" id="chk_content" name="wr_1" value="A 프로그램 문의">
+				<label for="chk1">A 프로그램 문의</label>
+			</div>
+			<div class="checkbox-custom checkbox-default">
+				<input type="checkbox" id="chk_content" name="wr_2" value="B 제품 문의">
+				<label for="chk2">B 제품 문의</label>
+			</div>
+			<div class="checkbox-custom checkbox-default">
+				<input type="checkbox" id="chk_content" name="wr_3" value="C 행사 문의">
+				<label for="chk3">C 행사 문의</label>
+			</div>
+			<div class="checkbox-custom checkbox-default">
+				<input type="checkbox" id="chk_content" name="wr_4" value="D 기타 문의">
+				<label for="chk4">D 기타 문의</label>
+			</div>
+
+			<input type="checkbox" name="agree"  id="agree" placeholder="개인정보수집 및 이용안내"/>
 		</div>
 
 		<a href="javascript:frmValid();" class="submit">등록</a>
-    </form>
+	</form>
 </div>
  
 <script>
@@ -97,10 +98,12 @@ function frmValid(){
 			alert("개인정보수집 및 이용안내에 동의 하셔야 합니다.");
 			return false;
 		}
-                         
+  
 		submit();
 	}  
+
 }
+
 </script> 
 {% endhighlight %}
 
