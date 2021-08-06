@@ -6,6 +6,7 @@ excerpt: "Form & 입력값 검증하기"
 tags: [PHP, JavaScript, formValid, Codeigniter, Mail, 유동변수, 메일]
 comments: false
 php: true
+codeigniter: true
 feature: /assets/img/php_logo.jpg
 ---
 
