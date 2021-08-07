@@ -9,15 +9,23 @@ eclipse: true
 feature: /assets/img/eclipse_logo.jpg
 ---
  
-1. Help -> Install New Software 클릭  
+# 1. Help -> Install New Software 클릭  
 <figure>
-	<img src="/assets/img/log_directory.png">
+	<img src="/assets/img/quick-search1.png">
 </figure>
-2.  Work with 입력 
-http://dist.springsource.com/release/TOOLS/update/e4.3/
- 
 
-3. Common_model 추가로 생성하기
+# 2. Add... 클릭 -> Name, Location 입력 -> Add 클릭
+* Name: QuickSearch
+* Location: http://dist.springsource.com/release/TOOLS/update/e4.3/
 
-4. 검색 후 Core/Eclipse Integration Commons 밑에 Eclipse QuickSearh 만 체크하고 Next, Install
+<figure>
+	<img src="/assets/img/quick-search2.png">
+</figure> 
+
+# 3. Wock with 에 입력한 Name과 Location 확인 -> Core/Eclipse Integration Commons 클릭 -> Eclipse QuickSearh 만 체크 -> Next
+<figure>
+	<img src="/assets/img/quick-search3.png">
+</figure> 
+
+# 4. Restart 후 Ctrl + Shift + L 로 확인!! 
  
