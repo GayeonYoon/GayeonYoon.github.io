@@ -10,7 +10,9 @@ feature: /assets/img/eclipse_logo.jpg
 ---
  
 1. Help -> Install New Software 클릭  
-
+<figure>
+	<img src="/assets/img/log_directory.png">
+</figure>
 2.  Work with 입력 
 http://dist.springsource.com/release/TOOLS/update/e4.3/
  
