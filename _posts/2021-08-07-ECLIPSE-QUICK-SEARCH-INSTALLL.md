@@ -22,8 +22,8 @@ feature: /assets/img/eclipse_logo.jpg
 	<img src="/assets/img/quick-search2.png">
 </figure> 
 
-# 3. Wock with 에 입력한 Name과 Location 확인 ->
-# Core/Eclipse Integration Commons 클릭 -> Eclipse QuickSearh 만 체크 -> Next
+# 3. 
+Wock with 에 입력한 Name과 Location 확인 -> Core/Eclipse Integration Commons 클릭 -> Eclipse QuickSearh 만 체크 -> Next
 <figure>
 	<img src="/assets/img/quick-search3.png">
 </figure> 
