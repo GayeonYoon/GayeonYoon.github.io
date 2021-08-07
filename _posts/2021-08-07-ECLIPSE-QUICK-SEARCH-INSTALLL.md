@@ -28,5 +28,6 @@ Wock with 에 입력한 Name과 Location 확인 -> Core/Eclipse Integration Comm
 	<img src="/assets/img/quick-search3.png">
 </figure> 
 
-# 4. Restart 후 Ctrl + Shift + L 로 확인!! 
+# 4. Restart
+Restart 후 Ctrl + Shift + L 로 확인하면 현재 WorkSpace 내에 있는 모든 해당되는것을 찾아준다.. Good👍 (없음못살아)
  
