@@ -20,7 +20,8 @@ feature: /assets/img/bg.jpg
 ------
 ## Technical Skills
 ### Back-End Skills 
- * Java(JDK1.8), PHP Version 7.3.29
+ * Java(JDK1.8)
+ * PHP Version 7.3.29
  * Spring 4.0, SpringBoot
  * Codeigniter 4
  * Maven, Gradle 
