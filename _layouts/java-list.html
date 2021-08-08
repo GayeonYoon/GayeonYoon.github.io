@@ -25,7 +25,7 @@ layout: compress
                   {% for post in site.posts %} 
                     {% if post == null %}
                     <ul>
-                        <li class="wow fadeInLeft" data-wow-duration="1.5s" style="border-top: inset;border-color: #8c8b8b45;">
+                        <li class="wow fadeInLeft" data-wow-duration="1.5s"  style="border-bottom: solid lightgray;">
                             <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                             <p>{{ post.excerpt }}</p>
                             <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a>
