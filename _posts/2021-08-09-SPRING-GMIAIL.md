@@ -180,10 +180,6 @@ public class MailService {
 	private String FROM_ADDRESS;
 
 	public void mailSend(MailDto mailDto) {
-		System.out.println("====================");
-		System.out.println("FROM_ADDRESS : " + FROM_ADDRESS);
-		System.out.println("====================");
-		
 		try {
 			MailHandler mailHandler = new MailHandler(mailSender);
 			mailHandler.setTo(mailDto.getAddress());
