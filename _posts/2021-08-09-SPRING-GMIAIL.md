@@ -250,7 +250,7 @@ spring:
     host: smtp.gmail.com
     port: 587       # TLS의 포트번호는 587이며 SSL의 포트번호는 465이다. 
     username: yoonpiri@gmail.com
-    password: mgbemdyaezufhyje aaa  //인증받은 password 16자리 입력
+    password: mgbemdyaezufhyje  //인증받은 password 16자리 입력
     properties:
       mail:
         smtp:
