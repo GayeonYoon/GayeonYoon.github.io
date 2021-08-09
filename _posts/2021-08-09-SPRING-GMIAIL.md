@@ -254,7 +254,7 @@ spring:
     host: smtp.gmail.com
     port: 587       # TLS의 포트번호는 587이며 SSL의 포트번호는 465이다. 
     username: yoonpiri@gmail.com
-    password: password  //인증받은 password
+    password: mgbemdyaezufhyje aaa  //인증받은 password 16자리 입력
     properties:
       mail:
         smtp:
@@ -336,27 +336,22 @@ server:
 
 {% endhighlight%}
   
-  
-  
-# 1. Help -> Install New Software 클릭  
+# 6. Gmail security 2단계 인증, 비밀번호 받기
+1) https://myaccount.google.com/security 링크로 접속하여 2단계 인증을 ON으로 변경.
 <figure>
-	<img src="/assets/img/quick-search1.png">
+	<img src="/assets/img/gmail_security.png">
 </figure>
 
-# 2. Add... 클릭 -> Name, Location 입력 -> Add 클릭
-* Name: QuickSearch
-* Location: http://dist.springsource.com/release/TOOLS/update/e4.3/
-
+2) 앱 비밀번호 생성.
+* 기기용 앱 비밀번호 생성이 완료됐을경우, 16자리 코드가 application.yml  에서 password로 들어간다.
 <figure>
-	<img src="/assets/img/quick-search2.png">
-</figure> 
-
-# 3. QuickSearch 체크
-Work with 에 입력한 Name과 Location 확인 -> Core/Eclipse Integration Commons 클릭 -> Eclipse QuickSearh 만 체크 -> Next
-<figure>
-	<img src="/assets/img/quick-search3.png">
-</figure> 
-
+	<img src="/assets/img/gmail_security2.png">
+</figure>
+ 
+ 
 # 4. Restart
 Restart 후 Ctrl + Shift + L 로 확인하면 현재 WorkSpace 내에 있는 모든 해당되는것을 찾아준다.. Good👍 (없음못살아)
- 
+
+    
+* 참고 
+https://velog.io/@max9106/Spring-Boot-Gmail-SMTP-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0%EB%A9%94%EC%9D%BC%EB%B3%B4%EB%82%B4%EA%B8%B0
