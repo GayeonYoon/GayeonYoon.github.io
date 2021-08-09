@@ -337,7 +337,8 @@ server:
 {% endhighlight%}
   
 # 6. Gmail security 2단계 인증, 비밀번호 받기
-1) https://myaccount.google.com/security 링크로 접속하여 2단계 인증을 ON으로 변경.
+   
+1) [구글 계정 보안](https://myaccount.google.com/security) 링크로 접속하여 2단계 인증을 ON으로 변경.
 <figure>
 	<img src="/assets/img/gmail_security.png">
 </figure>
