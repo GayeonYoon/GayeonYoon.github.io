@@ -343,14 +343,39 @@ server:
 </figure>
 
 2) 앱 비밀번호 생성.
-* 기기용 앱 비밀번호 생성이 완료됐을경우, 16자리 코드가 application.yml  에서 password로 들어간다.
+
+    * 기타 (맞춤 이름) 선택
 <figure>
 	<img src="/assets/img/gmail_security2.png">
 </figure>
+    * SMTP 입력
+<figure>
+	<img src="/assets/img/gmail_security3.png">
+</figure>
+    * 기기용 앱 비밀번호 생성이 완료됐을경우, 이 16자리 코드가 application.yml  에서 password로 들어간다.
+<figure>
+	<img src="/assets/img/gmail_security4.png">
+</figure>
  
- 
-# 4. Restart
-Restart 후 Ctrl + Shift + L 로 확인하면 현재 WorkSpace 내에 있는 모든 해당되는것을 찾아준다.. Good👍 (없음못살아)
+# 7. Swagger 로 메일 보내기 - POST Mapping
+<figure>
+	<img src="/assets/img/gmail_swqgger.png">
+</figure>
+<figure>
+	<img src="/assets/img/gmail_swqgger2.png">
+</figure>
+
+* Response Code 200 확인
+<figure>
+	<img src="/assets/img/gmail_swqgger3.png">
+</figure>
+    
+# 8. Mail 확인
+<figure>
+	<img src="/assets/img/gmail_confirm.png">
+</figure>
+
+😥 Gmail SMTP Server는 개발용으로는 괜찮지만, 일일 전송량 제한때문에 실제 도메인에서는 사용 어려운점 참고! 
 
     
 * 참고 
