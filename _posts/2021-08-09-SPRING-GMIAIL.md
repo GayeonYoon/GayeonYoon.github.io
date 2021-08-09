@@ -344,8 +344,8 @@ server:
 </figure>
 
 2) 앱 비밀번호 생성.
-
-    * 기타 (맞춤 이름) 선택
+    
+* 기타 (맞춤 이름) 선택
 <figure>
 	<img src="/assets/img/gmail_security2.png">
 </figure>
@@ -353,7 +353,8 @@ server:
 <figure>
 	<img src="/assets/img/gmail_security3.png">
 </figure>
-    * 기기용 앱 비밀번호 생성이 완료됐을경우, 이 16자리 코드가 application.yml  에서 password로 들어간다.
+    
+* 기기용 앱 비밀번호 생성이 완료됐을경우, 이 16자리 코드가 application.yml  에서 password로 들어간다.
 <figure>
 	<img src="/assets/img/gmail_security4.png">
 </figure>
