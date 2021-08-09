@@ -378,5 +378,5 @@ server:
 😥 Gmail SMTP Server는 개발용으로는 괜찮지만, 일일 전송량 제한때문에 실제 도메인에서는 사용 어려운점 참고! 
 
     
-* 참고 
+* 참고 <br>
 https://velog.io/@max9106/Spring-Boot-Gmail-SMTP-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0%EB%A9%94%EC%9D%BC%EB%B3%B4%EB%82%B4%EA%B8%B0
