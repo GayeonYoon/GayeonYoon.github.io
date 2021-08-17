@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Codeigniter] .htaccess 보안취약점 Header set 설정"
-date: 2021-08-17
+date: 2021-08-16
 excerpt: ".htaccess 보안취약점 Header set 설정"
 tags: [PHP 7, Codeigniter, htaccess, Xss, Header]
 comments: false
