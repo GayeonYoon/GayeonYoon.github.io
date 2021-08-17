@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Codeigniter] 다중 DB 연결하기"
+title: "[Codeigniter] Apache Http 접근시 Https로 강제 리다이렉트 만들기"
 date: 2021-08-06
-excerpt: "다중 DB 연결하기"
-tags: [PHP 7, Codeigniter, DB, MySQL]
+excerpt: "Apache Http 접근시 Https로 강제 리다이렉트 만들기"
+tags: [PHP 7, Codeigniter, Apache, .htaccess]
 comments: false
 ci: true
 feature: /assets/img/php_logo.jpg
