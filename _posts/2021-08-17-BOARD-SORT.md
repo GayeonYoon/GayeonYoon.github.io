@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[PHP] 그누보드5 BOARD 게시글 순서 변경하기"
-date: 2021-08-06
+date: 2021-08-17
 excerpt: "그누보드5 BOARD 게시글 순서 변경하기"
 tags: [PHP, JavaScript, Sort, Sorting, 그누보드5]
 comments: false
