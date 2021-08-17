@@ -134,3 +134,10 @@ function sortGoods(a,b,c){
   
             
 {% endhighlight %}
+
+
+# 3. 이미지 업로드 (www/img/icon01.png)
+<figure>
+	<img src="/assets/img/icon01.png">
+</figure>
+
