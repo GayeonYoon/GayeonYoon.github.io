@@ -144,3 +144,74 @@ function sortGoods(a,b,c){
 	<img src="/assets/img/icon01.png">
 </figure>
 
+
+# 4. Codeigniter - Controller에서 사용 
+{% highlight php%}
+    /**
+	 * 상품 정렬 처리
+	 * 
+	 */
+     
+	function productSortProc() 
+	{
+		//검색
+		$page  = $this->input->post('page',true);
+		$dbjob  = $this->input->post('dbjob',true);
+		$sort_no  = $this->input->post('sort_no',true);
+		$seq  = $this->input->post('seq',true);
+		$cate = $this->input->post("cate",true);
+		$keyname = $this->input->post("keyname",true);
+		$keyword = $this->input->post("keyword",true);
+		
+		$p[] = 'cate='.$cate;
+		$p[] = 'keyname='.$keyname;
+		$p[] = 'keyword='.urlencode($keyword);
+		$param = '&'.implode('&',$p);
+
+			
+		//상품 순서정렬 조건절
+		$_where = array();
+		if($cate) $_where[] = " cate='$cate' ";
+		if($keyname && $keyword) $_where[] = $keyname." LIKE '%".$keyword."%'";
+		$where = (sizeof($_where)>0)?' AND '.implode(' AND ',$_where):'';
+		
+		unset($config);		
+		$config['where'] = array('seq'=>$seq);
+		$config['table'] = 'mpl_product';
+		$config['dbjob'] = $dbjob;
+
+		switch($dbjob)
+		{
+		case('down'):
+		$msg = '수정되었습니다.';
+		$config['data'] = null;
+		$query = $this->db->query('SELECT seq,sort_no FROM '.$config['table'].' WHERE sort_no > '.$sort_no.$where.'  ORDER BY sort_no LIMIT 1');
+   
+		if($query->num_rows() > 0){
+			
+			$row = $query->row_array();
+			$this->db->where('seq',$seq);
+			$this->db->update($config['table'],array('sort_no'=>$row['sort_no']));
+
+			$this->db->where('seq',$row['seq']);
+			$this->db->update($config['table'],array('sort_no'=>$sort_no));
+		}
+		break;
+		case('up'):
+			$msg = '수정되었습니다.';
+			$config['data'] = null;
+			$query = $this->db->query('SELECT seq,sort_no FROM '.$config['table'].' WHERE sort_no < '.$sort_no.$where.'  ORDER BY sort_no DESC LIMIT 1 ');
+
+			if($query->num_rows() > 0){
+				$row = $query->row_array();
+				$this->db->where('seq',$seq);
+				$this->db->update($config['table'],array('sort_no'=>$row['sort_no']));
+				$this->db->where('seq',$row['seq']);
+				$this->db->update($config['table'],array('sort_no'=>$sort_no));	
+			}
+		break;
+		}
+		modal_script(json_encode(array('msg'=>$msg,'url'=>base_url('/product/manager/productList?language='.$this->language.'&page='.$page.$param))));
+
+	}
+{% endhighlight%}
