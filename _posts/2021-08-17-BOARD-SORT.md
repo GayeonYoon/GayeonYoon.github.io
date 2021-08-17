@@ -105,6 +105,9 @@ include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
 <!-- CSS 추가-->
 
 <style>
+a.plus{width:25px;height:25px;background:url('/images/icon01.png') no-repeat -86px center;}
+a.minus{width:25px;height:25px;background:url('/images/icon01.png') no-repeat -58px center;}
+    
 a.arrow-up{width:25px;height:25px;background:url('/img/icon01.png') no-repeat 0 center;overflow:hidden;display:inline-block}
 a.arrow-down{width:25px;height:25px;background:url('/img/icon01.png') no-repeat -28px center;overflow:hidden;display:inline-block}
 a.arrow-left{width:25px;height:25px;background:url('/img/icon01.png') no-repeat -144px center;overflow:hidden;display:inline-block}
