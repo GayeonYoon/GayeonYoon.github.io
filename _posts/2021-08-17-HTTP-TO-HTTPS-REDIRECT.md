@@ -10,7 +10,7 @@ feature: /assets/img/php_logo.jpg
 ---
 
 # 1. www/.htaccess 파일 생성
-
+{% highlight apache %}
 <IfModule mod_rewrite.c>
  RewriteEngine On
  RewriteBase /
@@ -21,3 +21,4 @@ feature: /assets/img/php_logo.jpg
  RewriteCond %{REQUEST_FILENAME} !-d
  RewriteRule ^(.*)$ /index.php/$1 
 </IfModule> 
+{% endhighlight %}
