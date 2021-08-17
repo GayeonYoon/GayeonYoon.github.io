@@ -11,6 +11,7 @@ feature: /assets/img/php_logo.jpg
 
 # 1. www/.htaccess 파일 생성
 
+{% highlight apache %}
 <IfModule mod_rewrite.c>
  RewriteEngine On
  RewriteBase /
@@ -37,4 +38,4 @@ Options -Indexes
 	Header set Pragma "no-cache"
   </IfModule>
 </FilesMatch>
-
+{% endhighlight %}
