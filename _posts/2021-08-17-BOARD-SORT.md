@@ -128,8 +128,8 @@ function sortGoods(a,b,c){
 		action = "/bbs/list_update_num.php"
 		target = "ifrm-proc";
 		submit();
-		action = ""; 
-		target = "";
+		//action = ""; 
+		//target = "";
 	}
 }
 
