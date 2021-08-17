@@ -102,6 +102,16 @@ include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
 </form>
 
 
+<!-- CSS 추가-->
+
+<style>
+a.arrow-up{width:25px;height:25px;background:url('/img/icon01.png') no-repeat 0 center;overflow:hidden;display:inline-block}
+a.arrow-down{width:25px;height:25px;background:url('/img/icon01.png') no-repeat -28px center;overflow:hidden;display:inline-block}
+a.arrow-left{width:25px;height:25px;background:url('/img/icon01.png') no-repeat -144px center;overflow:hidden;display:inline-block}
+a.arrow-right{width:25px;height:25px;background:url('/img/icon01.png') no-repeat -116px center;overflow:hidden;display:inline-block}
+</style>
+
+
 <!-- script 추가 -->
 <script type="text/javascript">
 //순서변경
