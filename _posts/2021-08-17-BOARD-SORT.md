@@ -114,12 +114,14 @@ a.arrow-left{width:25px;height:25px;background:url('/img/icon01.png') no-repeat 
 a.arrow-right{width:25px;height:25px;background:url('/img/icon01.png') no-repeat -116px center;overflow:hidden;display:inline-block}
 </style>
 
-<form name="frm" action="proc" method="post">
+
+<!-- 아래처럼 다른 폼 사용해도 깔꿈하겠다-->
+<!-- <form name="frm" action="proc" method="post">
 <input type="hidden" name="dbjob" />
 <input type="hidden" name="seq" />
 <input type="hidden" name="sort_no" value="">
 <input type="hidden" name="keyword" value="<?=$this->input->get('keyword')?>" />
-</form>
+</form>--> 
 
 <!-- script 추가 -->
 <script type="text/javascript">
