@@ -16,9 +16,10 @@ feature: /assets/img/spring_boot_logo.jpg
 - 다중성 : 일대일, 일대다, 다대일, 다대다
 - 연관관계 주인 : 객체 양방향 연관관계는 주인이 필요함! 
 
-* 1. 일대일 단방향 매핑
-{% highligh java%}
+# 1. 일대일 단방향 매핑
 
+1) Host1 
+{% highligh java%}
 package com.example.demo.domain;
 
 import javax.persistence.Entity;
@@ -54,8 +55,37 @@ public class Host1 {
 	}
 
 }
+{% endhighlight%}
 
+2) Target1 
 
+{% highligh java%}
+package com.example.demo.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@NoArgsConstructor
+@Data
+public class Target1 {
+
+	// 1:1 단방향
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String name;
+
+	@Builder
+	public Target1(String name) {
+		this.name = name;
+	}
+}
 {% endhighlight%}
 
