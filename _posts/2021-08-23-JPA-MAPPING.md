@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[PHP] sssssssssssssssss "
+title: "[Spring Boot] JPA-MAPPING "
 date: 2021-08-06
 excerpt: "Form & 입력값 검증하기"
 tags: [PHP, JavaScript, formValid, Codeigniter, Mail, 유동변수, 메일]
