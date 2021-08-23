@@ -5,7 +5,7 @@ date: 2021-08-23
 excerpt: "JPA 연관관계 매핑"
 tags: [Eclipse, SpringBoot, JPA, Mapping]
 comments: false
-spring: true
+php: true
 feature: /assets/img/spring_boot_logo.jpg
 ---
 
