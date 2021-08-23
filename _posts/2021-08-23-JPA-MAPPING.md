@@ -86,6 +86,6 @@ public class Target1 {
 	public Target1(String name) {
 		this.name = name;
 	}
-}
+}  
 {% endhighlight%}
 
