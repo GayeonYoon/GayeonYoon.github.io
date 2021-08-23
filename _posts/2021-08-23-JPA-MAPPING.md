@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "[Spring Boot] JPA 연관관계 매핑"
-date: 2021-08-23
-excerpt: "JPA 연관관계 매핑"
-tags: [Eclipse, SpringBoot, JPA, Mapping]
+title: "[PHP] sssssssssssssssss "
+date: 2021-08-06
+excerpt: "Form & 입력값 검증하기"
+tags: [PHP, JavaScript, formValid, Codeigniter, Mail, 유동변수, 메일]
 comments: false
 php: true
-feature: /assets/img/spring_boot_logo.jpg
+codeigniter: true
+feature: /assets/img/php_logo.jpg
 ---
 
 # 연관관계 (단방향과 양방향)
