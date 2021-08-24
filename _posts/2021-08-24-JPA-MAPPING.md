@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Spring Boot] JPA Mapping 연관관계"
-date: 2021-07-04
+date: 2021-08-24
 excerpt: "JPA Mapping 연관관계"
 tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger, Eclipse]
 comments: false
