@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[PHP] 게시판 페이징 컨트롤하기"
-date: 2021-08-06
+date: 2021-08-24
 excerpt: "게시판 페이징기능 컨트롤 (주요공지사항 따로 구분하기)"
 tags: [PHP, JavaScript, formValid, Codeigniter, Paging, 페이징]
 comments: false
