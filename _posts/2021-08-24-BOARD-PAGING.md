@@ -20,10 +20,10 @@ feature: /assets/img/php_logo.jpg
 	//주요공지 list
 	unset($config);
 	$config = array(   
-			'orderby' => 'regist_date desc',
-			'select'=>'*,(SELECT COUNT(boardno) FROM mpl_board WHERE notice=1) AS cnt',
-			'where'=>array('notice'=>'1'), 
-            'table'=>'mpl_board',
+        'orderby' => 'regist_date desc',
+	    'select'=>'*,(SELECT COUNT(boardno) FROM mpl_board WHERE notice=1) AS cnt',
+	    'where'=>array('notice'=>'1'), 
+        'table'=>'mpl_board',
 		  );
 	$query = $this->common_model->_list($config);
 	$count = $this->common_model->_total($config); 
@@ -51,11 +51,11 @@ feature: /assets/img/php_logo.jpg
 	// 일반공지 list
 	unset($config);
 	$config = array(
-				'page'=>$page,
-				'listnum'=>$temp_listno, 
-				'orderby' => 'regist_date desc', 
-				'where'=>array(),
-				'table'=>'mpl_board',
+            'page'=>$page,
+            'listnum'=>$temp_listno, 
+            'orderby' => 'regist_date desc', 
+            'where'=>array(),
+            'table'=>'mpl_board',
 			  );
 	$query = $this->common_model->_list($config);  
 	$count = $this->common_model->_total($config); 
