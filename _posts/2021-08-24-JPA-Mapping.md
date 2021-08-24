@@ -22,7 +22,7 @@ feature: /assets/img/spring_boot_logo.jpg
 # 1. 일대일 단방향 매핑
 
 1) Host1 
-{% highligh java%}
+{% highlight java%}
 package com.example.demo.domain;
 
 import javax.persistence.Entity;
@@ -62,7 +62,7 @@ public class Host1 {
 
 2) Target1 
 
-{% highligh java%}
+{% highlight java%}
 package com.example.demo.domain;
 
 import javax.persistence.Entity;
