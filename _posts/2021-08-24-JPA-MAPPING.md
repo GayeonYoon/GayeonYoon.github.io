@@ -207,3 +207,24 @@ public class HostTargetController {
 
 {% endhighlight %}
 
+## 7. Swagger & DB 확인하기
+
+### 1. Swagger 에서 save1 실행
+<figure>
+	<img src="/assets/img/Host_Target_Swagger1.png">
+</figure>
+
+### 2. DBeaver 확인하기 (Insert 와 ERD)
+<figure>
+	<img src="/assets/img/Host_Target_ERD.png">
+</figure>
+
+### 3. read-host1 조회
+<figure>
+	<img src="/assets/img/Host1_OneToOne.png">
+</figure>
+
+### 4. read-target1 조회
+<figure>
+	<img src="/assets/img/Target1_OneToOne.png">
+</figure>
