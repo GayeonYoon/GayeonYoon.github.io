@@ -22,7 +22,7 @@ feature: /assets/img/spring_boot_logo.jpg
 # 1. 일대일 단방향 
 
 ## 1. Entity  
-### 1. Host
+### 1. Host - 주 테이블
 {% highlight java %}
 package com.example.demo.domain;
 
