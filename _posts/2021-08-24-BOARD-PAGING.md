@@ -14,67 +14,65 @@ feature: /assets/img/php_logo.jpg
 # 1. Controller
 {% highlight php %}
  function notice()
-	{  
-		$page = ($this->input->get("page",true)) ? $this->input->get("page",true) : 1;
+{  
+	$page = ($this->input->get("page",true)) ? $this->input->get("page",true) : 1;
 
-		//주요공지 list
-		unset($config);
-		$config = array( 
-					//'orderby'=>'notice DESC, ref_id DESC,ansnum',   //공지사항 먼저 소팅
-					'orderby' => 'regist_date desc',
-					'select'=>'*,(SELECT COUNT(boardno) FROM mpl_board WHERE notice=1) AS cnt',
-					'where'=>array('notice'=>'1'), 
-					'table'=>'mpl_board',
-				  );
-		$query = $this->common_model->_list($config);
-		$count = $this->common_model->_total($config); 
+	//주요공지 list
+	unset($config);
+	$config = array(   
+			'orderby' => 'regist_date desc',
+			'select'=>'*,(SELECT COUNT(boardno) FROM mpl_board WHERE notice=1) AS cnt',
+			'where'=>array('notice'=>'1'), 
+            'table'=>'mpl_board',
+		  );
+	$query = $this->common_model->_list($config);
+	$count = $this->common_model->_total($config); 
 	 
-		$notice_list = null;
-		$notice_list_fields = $this->db->list_fields($config['table']);
-		foreach($query->result() as $row)
-		{
-			foreach ($query->list_fields() as $notice_list_field){
-			   $notice_list_fld[$notice_list_field] = $row->$notice_list_field;
-			}
-			$notice_list[] = $notice_list_fld; 
-
-			if($notice_list[0]['cnt']){
-				$notice_count = $notice_list[0]['cnt'];
-			} 
+	$notice_list = null;
+	$notice_list_fields = $this->db->list_fields($config['table']);
+	foreach($query->result() as $row)
+	{
+		foreach ($query->list_fields() as $notice_list_field){
+		   $notice_list_fld[$notice_list_field] = $row->$notice_list_field;
 		}
-
-		if(!$notice_count){
-			$notice_count = 0;
+		$notice_list[] = $notice_list_fld; 
+		if($notice_list[0]['cnt']){
+			$notice_count = $notice_list[0]['cnt'];
 		} 
-		
-		$static_listno = 10;								//한 페이지에 보여줄 게시글 수
-		$temp_listno = $static_listno - $notice_count;		//한 페이지에 보여줄 게시글 수 - 주요 공지사항 개수 = $temp_listno. //  $temp_listno만큼 주요공지 밑으로 list찍기
+	}
 
-		// 일반공지 list
-		unset($config);
-		$config = array(
-					'page'=>$page,
-					'listnum'=>$temp_listno, 
-					'orderby' => 'regist_date desc', 
-					'where'=>array(),
-					'table'=>'mpl_board',
-				  );
-		$query = $this->common_model->_list($config);  
-		$count = $this->common_model->_total($config); 
+	if(!$notice_count){
+		$notice_count = 0;
+	} 
+	
+	$static_listno = 10;								//한 페이지에 보여줄 게시글 수
+	$temp_listno = $static_listno - $notice_count;		//한 페이지에 보여줄 게시글 수 - 주요 공지사항 개수 = $temp_listno. //  $temp_listno만큼 주요공지 밑으로 list찍기
+
+	// 일반공지 list
+	unset($config);
+	$config = array(
+				'page'=>$page,
+				'listnum'=>$temp_listno, 
+				'orderby' => 'regist_date desc', 
+				'where'=>array(),
+				'table'=>'mpl_board',
+			  );
+	$query = $this->common_model->_list($config);  
+	$count = $this->common_model->_total($config); 
 	  
-		$list = null;
-		$fields = $this->db->list_fields($config['table']);
-		foreach($query->result() as $row)
-		{
-			foreach ($query->list_fields() as $field){
-			   $fld[$field] = $row->$field;
-			}
-			$list[] = $fld; 
+	$list = null;
+	$fields = $this->db->list_fields($config['table']);
+	foreach($query->result() as $row)
+	{
+		foreach ($query->list_fields() as $field){
+		   $fld[$field] = $row->$field;
 		}
-    
-		$listnum =$temp_listno;  //10
-		$total_page = ceil($count / $listnum); 
-		$list_no = $count - $listnum * ($page-1);
+		$list[] = $fld; 
+	}
+   
+	$listnum =$temp_listno;  //10
+	$total_page = ceil($count / $listnum); 
+	$list_no = $count - $listnum * ($page-1);
  		
 	//	echo '<br>전체 게시글 수 : '.$count;
 	//	echo '<br>전체 페이징 수 : '.$total_page; 
@@ -82,29 +80,29 @@ feature: /assets/img/php_logo.jpg
 	//	echo '<br>처음 글 번호 : '.$list_no; 
 		
  
-		$html ='pages/notice';
-		$data = array(
-				'_title' => null,
-				'_contents' => 'view',
-				'_skin' => 'single',
-				'_language' => $this->language,
-				'_menu' => null,
-				'_view' => $html,
-				'_param'=> $param,
-				'_folder' =>$this->folder,
-				'_list' => $list,   //글 전체 List
-				'_notice_list' => $notice_list,  //주요공지 List
-				'_list_no' => $list_no,
-				'_page' => $page,
-				'_total_page' =>$total_page,
-				//'_paging'=> $this->pagination->create_links(),
-			 
-		);
+	$html ='pages/notice';
+	$data = array(
+			'_title' => null,
+			'_contents' => 'view',
+			'_skin' => 'single',
+			'_language' => $this->language,
+			'_menu' => null,
+			'_view' => $html,
+			'_param'=> $param,
+			'_folder' =>$this->folder,
+			'_list' => $list,   //글 전체 List
+			'_notice_list' => $notice_list,  //주요공지 List
+			'_list_no' => $list_no,
+			'_page' => $page,
+			'_total_page' =>$total_page,
+			//'_paging'=> $this->pagination->create_links(),
+		 
+	);
 
-		$data = array_merge($data); 
-		$this->load->view('masterpage',$data); 
+	$data = array_merge($data); 
+	$this->load->view('masterpage',$data); 
 		
-	}
+}
 {% endhighlight %}
 
 # 2. View
