@@ -209,7 +209,7 @@ public class HostTargetController {
 
 ## 7. Swagger & DB 확인하기
 
-### 1. Swagger 에서 save1 실행
+### 1. save1 실행
 <figure>
 	<img src="/assets/img/Host_Target_Swagger1.png">
 </figure>
