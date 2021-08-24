@@ -21,7 +21,7 @@ feature: /assets/img/spring_boot_logo.jpg
 
 # 1. 일대일 단방향 
 
-1. Host1  
+## 1. Host1  
 {% highlight java %}
 package com.example.demo.domain;
 
@@ -36,9 +36,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity				//JPA가 관리함
-@NoArgsConstructor	// 기본생성자
-@Data				//@ToString, @EqualsAndHashCode, @Getter, @Setter, @RequiredArgsConstructor을 한번에 사용하는 어노테이션
+@Entity
+@NoArgsConstructor
+@Data
 public class Host1 {
 
 	// 1:1 단방향
@@ -60,7 +60,7 @@ public class Host1 {
 } 
 {% endhighlight %}
 
-2. Target1 
+## 2. Target1 
 {% highlight java %}
 package com.example.demo.domain;
 
@@ -91,7 +91,7 @@ public class Target1 {
 }  
 {% endhighlight %}
 
-3. Host1Repository
+## 3. Host1Repository
 {% highlight java %}
 package com.example.demo.repository;
 
@@ -107,7 +107,7 @@ public interface Host1Repository extends JpaRepository<Host1, Long> {
 
 {% endhighlight %}
 
-4. TargetRepository
+## 4. TargetRepository
 {% highlight java %}
 package com.example.demo.repository;
 
@@ -123,7 +123,7 @@ public interface Target1Repository extends JpaRepository<Target1, Long> {
 
 {% endhighlight %}
 
-5. HostTargetService1
+## 5. HostTargetService1
 {% highlight java %}
 package com.example.demo.service;
 
@@ -161,7 +161,7 @@ public class HostTargetService1 {
 }
 {% endhighlight %}
 
-6. HostTargetController
+## 6. HostTargetController
 {% highlight java %}
 package com.example.demo.controller;
 
