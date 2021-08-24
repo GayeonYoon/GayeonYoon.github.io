@@ -21,8 +21,8 @@ feature: /assets/img/spring_boot_logo.jpg
 
 # 1. 일대일 단방향 매핑
 
-1) Host1 
-{% highlight java%}
+1) Host1  
+{% highlight java %}
 package com.example.demo.domain;
 
 import javax.persistence.Entity;
@@ -57,12 +57,11 @@ public class Host1 {
 		this.target = target;
 	}
 
-}
-{% endhighlight%}
-
+} 
+{% endhighlight %}
 2) Target1 
 
-{% highlight java%}
+{% highlight java %}
 package com.example.demo.domain;
 
 import javax.persistence.Entity;
@@ -90,5 +89,5 @@ public class Target1 {
 		this.name = name;
 	}
 }  
-{% endhighlight%}
+{% endhighlight %}
 
