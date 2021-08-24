@@ -152,7 +152,6 @@ public class HostTargetService1 {
 	}
 
 	public Target1 read1() {
-
 		return targetRepo.findById(1L).get();
 	}
 
