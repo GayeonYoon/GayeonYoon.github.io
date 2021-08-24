@@ -214,6 +214,13 @@ public class HostTargetController {
 	<img src="/assets/img/Host_Target_Swagger1.png">
 </figure>
 
+save1 실행하면 test 계정에 host1 과 target1 테이블이 만들어지며, 데이터 insert를 확인할 수 있다.
+
+콘솔창 log에 찍힌 query도 확인하자.
+<figure>
+	<img src="/assets/img/Insert_Console.png">
+</figure>
+
 ### 2. DBeaver 확인하기 (Insert 와 ERD)
 <figure>
 	<img src="/assets/img/Host_Target_ERD.png">
@@ -222,6 +229,11 @@ public class HostTargetController {
 ### 3. read-host1 조회
 <figure>
 	<img src="/assets/img/Host1_OneToOne.png">
+</figure>
+
+마찬가지로 log에 찍힌 Select query 확인하면 아래와 같다. 
+<figure>
+	<img src="/assets/img/Host1_Read_Console.png">
 </figure>
 
 ### 4. read-target1 조회
