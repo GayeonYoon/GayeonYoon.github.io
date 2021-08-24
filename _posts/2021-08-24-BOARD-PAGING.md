@@ -124,19 +124,19 @@ feature: /assets/img/php_logo.jpg
 
 <?php if($_total_page > 1):?>
 <!-- 1. 현재페이지 = $_page-->
-		<div class="pagging">  
- 
-			<a href="/front/notice?page=1" class="move active first">처음</a><!-- 링크가 있을 경우 active를 주세요 --> 
-			<a href="/front/notice?page=<?=$_prev_page?>" class="move active prev">이전</a> <!-- 링크가 있을 경우 active를 주세요 --> 
-			  
-			<?php for($i=1; $i<=$_total_page; $i++):?>
-				<a href="/front/notice?page=<?=$i?>" class="num <?= ($_page == $i)? 'active' : '' ?>"><?=$i?></a>  
-			<?php endfor;?>
+<div class="pagging">  
 
-			<a href="/front/notice?page=<?=$_next_page?>" class="move active next">다음</a> <!-- 링크가 있을 경우 active를 주세요 --> 
-			<a href="/front/notice?page=<?=$_total_page?>" class="move active last">마지막</a> <!-- 링크가 있을 경우 active를 주세요 --> 
+	<a href="/front/notice?page=1" class="move active first">처음</a><!-- 링크가 있을 경우 active를 주세요 --> 
+	<a href="/front/notice?page=<?=$_prev_page?>" class="move active prev">이전</a> <!-- 링크가 있을 경우 active를 주세요 --> 
+		  
+	<?php for($i=1; $i<=$_total_page; $i++):?>
+		<a href="/front/notice?page=<?=$i?>" class="num <?= ($_page == $i)? 'active' : '' ?>"><?=$i?></a>  
+	<?php endfor;?>
+
+       <a href="/front/notice?page=<?=$_next_page?>" class="move active next">다음</a> <!-- 링크가 있을 경우 active를 주세요 --> 
+	<a href="/front/notice?page=<?=$_total_page?>" class="move active last">마지막</a> <!-- 링크가 있을 경우 active를 주세요 --> 
  
-		</div> 
+</div> 
     
 <?php endif;?>
 {% endhighlight %}
