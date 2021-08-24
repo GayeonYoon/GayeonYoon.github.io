@@ -203,21 +203,6 @@ public class HostTargetController {
 	public Target1 readchild1() {
 		return hostTargetService1.read1();
 	}
-
-	@PostMapping("/save2")
-	public void save2() {
-		hostTargetService2.save();
-	}
-
-	@GetMapping("/read-host2")
-	public Host2 readparent2() {
-		return hostTargetService2.read2();
-	}
-
-	@GetMapping("/read-target2")
-	public Target2 readchild2() {
-		return hostTargetService2.read1();
-	}
 }
 
 {% endhighlight %}
