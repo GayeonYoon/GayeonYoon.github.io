@@ -21,7 +21,8 @@ feature: /assets/img/spring_boot_logo.jpg
 
 # 1. 일대일 단방향 
 
-## 1. Host1  
+## 1. Entity  
+### 1. Host
 {% highlight java %}
 package com.example.demo.domain;
 
@@ -60,7 +61,7 @@ public class Host1 {
 } 
 {% endhighlight %}
 
-## 2. Target1 
+### 2. Target
 {% highlight java %}
 package com.example.demo.domain;
 
