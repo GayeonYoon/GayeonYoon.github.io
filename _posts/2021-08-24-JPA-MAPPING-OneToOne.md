@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Spring Boot] Jpa Mapping 연관관계"
+title: "[Spring Boot] Jpa Mapping 연관관계 "
 date: 2021-08-24
-excerpt: "Jpa Mapping 연관관계"
+excerpt: "Jpa Mapping 연관관계(일대일 단방향)"
 tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger, Eclipse]
 comments: false
 spring: true
@@ -14,7 +14,7 @@ feature: /assets/img/spring_boot_logo.jpg
 
 # 연관관계 (단방향과 양방향)
 
-* 연관관계 매핑 
+## 연관관계 매핑 
 - 방향 : 단방향, 양방향
 - 다중성 : 일대일, 일대다, 다대일, 다대다
 - 연관관계 주인 : 객체 양방향 연관관계는 주인이 필요함! 
