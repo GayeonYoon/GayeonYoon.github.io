@@ -1,11 +1,5 @@
-# :star: Yoon's Blog  :star:
-  
-## `HI~~`
-    
-######(If you like this theme or using it, please give a :heart: for motivation.)
-
-**[Moon](https://taylantatli.github.io/Moon)** is a minimal, one column jekyll theme.
-
+# 💁Welcome Yoon's Blog  🖤
+ 
 ## Features
 * Minimal, you can focus on your content
 * Responsive
