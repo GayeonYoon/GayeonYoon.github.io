@@ -104,7 +104,7 @@ public class Target2 {
 }
 {% endhighlight %}
 
-## 3. Host1Repository
+## 3. HostRepository
 {% highlight java %}
 package com.example.demo.repository;
 
