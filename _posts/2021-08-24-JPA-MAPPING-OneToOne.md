@@ -10,8 +10,6 @@ feature: /assets/img/spring_boot_logo.jpg
 
 ---
 
-
-
 # 연관관계 (단방향과 양방향)
 
 ## 연관관계 매핑 
@@ -124,7 +122,7 @@ public interface Target1Repository extends JpaRepository<Target1, Long> {
 
 {% endhighlight %}
 
-## 5. HostTargetService1
+## 5. HostTargetService
 {% highlight java %}
 package com.example.demo.service;
 
