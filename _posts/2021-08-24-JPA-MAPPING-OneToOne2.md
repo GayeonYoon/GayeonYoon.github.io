@@ -10,11 +10,6 @@ feature: /assets/img/spring_boot_logo.jpg
 
 ---
 
-
-
-
-
-
 # 연관관계 (단방향과 양방향)
 
 ## 연관관계 매핑 
