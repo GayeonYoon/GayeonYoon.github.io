@@ -226,9 +226,9 @@ Eclipse 콘솔창 log에 찍힌 Insert query도 확인해보자.
 	<img src="/assets/img/Host_Target_ERD.png">
 </figure>
 
-1) host1 과 target1 테이블 확인
+1) host1 과 target1 테이블 & 데이터 확인 <br>
 2) ERD 확인 <br> 
-target1 테이블의 PK인 id가 host1 테이블의 FK로 설정.
+   target1 테이블의 PK인 id가 host1 테이블의 FK로 설정된것 확인.
 
 ### 3. read-host1 조회
 <figure>
