@@ -217,39 +217,14 @@ public class HostTargetController {
 {% endhighlight %}
 
 ## 7. Swagger & DB 확인하기
+### 1. save2 실행 후
 
-### 1. save1 실행
+### 2. read-host2 조회
 <figure>
-	<img src="/assets/img/Host_Target_Swagger1.png">
+	<img src="/assets/img/Host2_OneToOne.png">
 </figure>
-
-save1 실행하면 test 계정에 host1 과 target1 테이블이 만들어지며, 데이터 insert를 확인할 수 있다.
- 
-Eclipse 콘솔창 log에 찍힌 Insert query도 확인해보자.
+  
+### 4. read-target2 조회
 <figure>
-	<img src="/assets/img/Insert_Console.png">
-</figure>
-
-### 2. DBeaver 확인하기 (Data Insert 와 ERD)
-<figure>
-	<img src="/assets/img/Host_Target_ERD.png">
-</figure>
-
-1) host1 과 target1 테이블 확인
-2) ERD 확인 <br> 
-target1 테이블의 PK인 id가 host1 테이블의 FK로 설정.
-
-### 3. read-host1 조회
-<figure>
-	<img src="/assets/img/Host1_OneToOne.png">
-</figure>
-
-log에 찍힌 Select query 확인하면 아래와 같다. 
-<figure>
-	<img src="/assets/img/Host1_Read_Console.png">
-</figure>
-Join된 query 확인이 가능하다. 
-### 4. read-target1 조회
-<figure>
-	<img src="/assets/img/Target1_OneToOne.png">
+	<img src="/assets/img/Target2_OneToOne.png">
 </figure>
