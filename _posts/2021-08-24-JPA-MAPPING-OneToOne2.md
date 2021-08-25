@@ -228,3 +228,25 @@ public class HostTargetController {
 <figure>
 	<img src="/assets/img/Target2_OneToOne.png">
 </figure>
+
+
+<hr>
+## @JsonIdentityInfo 
+Host2에서 	@JsonIdentityInfo를 지우면 어떤일이 일어날까 ? 
+{% highlight java %}
+	@OneToOne
+	@JoinColumn(name = "target_id")
+//	@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class)
+	private Target2 target;
+{% endhighlight %}
+
+아래와같이 무한 순환참조가 일어난다. 
+<figure>
+	<img src="/assets/img/Not_JsonIdentityInfo.png">
+</figure>
+
+JPA ORM으로 개발하다보면 꽤나 많은 양방향 참조가 필요한 모델들이 있습니다. 그런데 문제는 이런 양방향관계를 가진 객체를 직렬화 하려고 할 때 무한참조가 되어 StackOverFlow를 발생시키는데요.
+그렇다고 해서 ORM이 가진 장점을 포기하고 단방향으로만 구성 할 수는 없을겁니다.
+
+때문에 @JsonIdentityInfo을 통해 순환참조될 대상의 식별키로 구분해 더이상 순환참조되지 않게 하는 방법이 있다. 
+
