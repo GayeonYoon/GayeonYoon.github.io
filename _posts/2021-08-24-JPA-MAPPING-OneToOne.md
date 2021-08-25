@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Spring Boot] Jpa Mapping 연관관계 "
+title: "[Spring Boot] Jpa Mapping 연관관계 1 "
 date: 2021-08-24
 excerpt: "Jpa Mapping 연관관계(일대일 단방향)"
 tags: [SpringBoot, Java, REST API, JPA, Hibernate, Swagger, Eclipse]
