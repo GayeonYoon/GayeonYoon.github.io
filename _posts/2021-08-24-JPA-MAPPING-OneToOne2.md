@@ -199,7 +199,7 @@ public class HostTargetController {
 	private final HostTargetService1 hostTargetService1;
 	private final HostTargetService2 hostTargetService2;
 
-    @PostMapping("/save2")
+    @PostMapping("/save2") 
 	public void save2() {
 		hostTargetService2.save();
 	}
@@ -214,7 +214,6 @@ public class HostTargetController {
 		return hostTargetService2.read1();
 	}
 }
-
 {% endhighlight %}
 
 ## 7. Swagger & DB 확인하기
