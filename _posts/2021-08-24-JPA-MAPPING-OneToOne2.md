@@ -245,3 +245,16 @@ JPA ORM으로 개발하다보면 꽤나 많은 양방향 참조가 필요한 모
 
 때문에 @JsonIdentityInfo을 통해 순환참조될 대상의 식별키로 구분해 더이상 순환참조되지 않게 하는 방법이 있다. 
 
+
+보시는 것처럼 Property를 설정할 수 있는 PropertyGenrator ,
+
+숫자형 ID로 설정하는 IntSequenceGenerator, 문자열 ID로 설정하는 StringIdGenerator UUID 형태의 ID로 설정하는 UUIDGenerator 등이 있습니다.
+
+저는 현재 숫자형 ID로 모든 엔티티가 이루어져 있어, IntSequenceGenerator 사용하고,
+
+property 명을 따로 명시하지 않으면 기본값 직렬화 시 객체의 id가 @id 로 설정되기 때문에 저는 property명을 명시해주었습니다.
+
+
+
+변경 후 테스트 결과는?
+정상적으로 한번 직렬화 된 객체는 id값으로만 직렬화 되어지고 있습니다!
