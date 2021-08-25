@@ -235,26 +235,26 @@ Host2에서 	@JsonIdentityInfo를 지우면 어떤일이 일어날까 ?
 	private Target2 target;
 {% endhighlight %}
 
-아래와같이 무한 순환참조가 일어난다. 
+아래와같은 현상이 발생한다. 
 <figure>
 	<img src="/assets/img/Not_JsonIdentityInfo.png">
 </figure>
 
-JPA ORM으로 개발하다보면 꽤나 많은 양방향 참조가 필요한 모델들이 있습니다. 그런데 문제는 이런 양방향관계를 가진 객체를 직렬화 하려고 할 때 무한참조가 되어 StackOverFlow를 발생시키는데요.
-그렇다고 해서 ORM이 가진 장점을 포기하고 단방향으로만 구성 할 수는 없을겁니다.
+JPA ORM으로 개발하다보면 꽤나 많은 양방향 참조가 필요한 모델들이 있다. <br>
+문제는 이런 양방향관계를 가진 객체를 직렬화 하려고 할 때 무한참조가 되어 StackOverFlow를 발생시켜 무한루프에 빠지게된다. <br>
+그렇다고 해서 ORM이 가진 장점을 포기하고 단방향으로만 구성 할 수는 없는 노릇 ,, <br>
+때문에 @JsonIdentityInfo을 통해 순환참조될 대상의 식별키로 구분해 더이상 순환참조되지 않게 하는 방법이 있다. <br>
 
-때문에 @JsonIdentityInfo을 통해 순환참조될 대상의 식별키로 구분해 더이상 순환참조되지 않게 하는 방법이 있다. 
-
-
-보시는 것처럼 Property를 설정할 수 있는 PropertyGenrator ,
-
-숫자형 ID로 설정하는 IntSequenceGenerator, 문자열 ID로 설정하는 StringIdGenerator UUID 형태의 ID로 설정하는 UUIDGenerator 등이 있습니다.
-
-저는 현재 숫자형 ID로 모든 엔티티가 이루어져 있어, IntSequenceGenerator 사용하고,
-
-property 명을 따로 명시하지 않으면 기본값 직렬화 시 객체의 id가 @id 로 설정되기 때문에 저는 property명을 명시해주었습니다.
+<figure>
+	<img src="/assets/img/JsonIdentityInfo.png">
+</figure>
 
 
+ObjectIdGenerators에는 
+- Property를 설정할 수 있는 PropertyGenrator ,<br>
+- 숫자형 ID로 설정하는 IntSequenceGenerator, <br>
+- 문자열 ID로 설정하는 StringIdGenerator UUID 형태의 ID로 설정하는 UUIDGenerator 등이 있다. 
 
-변경 후 테스트 결과는?
-정상적으로 한번 직렬화 된 객체는 id값으로만 직렬화 되어지고 있습니다!
+나는 현재 Long Type ID로  엔티티가 이루어져 있어, IntSequenceGenerator 사용.<br>
+추가로 property 명을 따로 명시하지 않으면 기본값 직렬화 시 객체의 id가 @id 로 설정된다.<br><br>
+
