@@ -111,13 +111,11 @@ package com.example.demo.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.domain.Host1;
+import com.example.demo.domain.Host2;
 
 @Repository
-public interface Host1Repository extends JpaRepository<Host1, Long> {
-
+public interface Host2Repository extends JpaRepository<Host2, Long> {
 }
-
 {% endhighlight %}
 
 ## 4. TargetRepository
@@ -127,13 +125,11 @@ package com.example.demo.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.domain.Target1;
+import com.example.demo.domain.Target2;
 
 @Repository
-public interface Target1Repository extends JpaRepository<Target1, Long> {
-
+public interface Target2Repository extends JpaRepository<Target2, Long> {
 }
-
 {% endhighlight %}
 
 ## 5. HostTargetService
