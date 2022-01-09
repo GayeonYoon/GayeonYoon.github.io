@@ -35,6 +35,10 @@ feature: /assets/img/bg.jpg
  * Oracle
  * Mysql, MariaDB
  * HeidiSQL / DBeaver / SQL developer 
+
+### Tools
+ * Eclipse
+ * Edit Plus
 <br><br>
 
 ------
