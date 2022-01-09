@@ -11,7 +11,7 @@ feature: /assets/img/bg.jpg
  
 ## Contact
 * Name : Gayeon Yoon
-* Phone : 010-0000-0000
+* Phone : 010-8780-2893
 * E-mail : yoonpiri@gmail.com  
 * Blog : [https://gayeonyoon.github.io/](https://gayeonyoon.github.io/)
 * Git Hub: [https://github.com/GayeonYoon](https://github.com/GayeonYoon)
@@ -20,10 +20,8 @@ feature: /assets/img/bg.jpg
 ------
 ## Technical Skills
 ### Back-End Skills 
- * Java (jdk 1.8)
- * PHP 7
- * Spring 4.0, SpringBoot
- * Codeigniter 4
+ * Java (jdk 1.8), Spring 4.0, SpringBoot
+ * PHP 7, Codeigniter 4
  * Maven, Gradle 
  * Servlet, JSP
  * myBATIS, JPA
@@ -42,7 +40,7 @@ feature: /assets/img/bg.jpg
 
 ------
 ## Work Experience
- * 2020.11 - 2021.11 ㅇㅎㅍ
+ * 2020.11 - 2021.01 쓰리데이즈(웹에이전시)
  * 2020.04 - 2020.11 Java언어 기반의 스마트 웹 Full-Stack개발자 양성 과정 수료
 <br><br>
 
