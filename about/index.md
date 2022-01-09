@@ -28,14 +28,13 @@ feature: /assets/img/bg.jpg
 
 ### Front-End Skills 
 * Javascript, jQuery
- * HTML5, CSS 3 
+ * HTML5, CSS 3
  * Ajax
    
 ### DB
  * Oracle
  * Mysql, MariaDB
- * MS-SQL
- * DBeaver
+ * HeidiSQL / DBeaver / SQL developer 
 <br><br>
 
 ------
