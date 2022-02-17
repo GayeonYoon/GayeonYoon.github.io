@@ -1,7 +1,4 @@
-# 💁Welcome Yoon's Blog  🖤
- 
-## Features
-
+# 🌼Welcome Yoon's Blog  🖤
 
 ## Preview
 
