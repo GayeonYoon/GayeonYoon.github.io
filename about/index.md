@@ -39,6 +39,8 @@ feature: /assets/img/bg.jpg
 ### Tools
  * Eclipse
  * Edit Plus
+ * xFrame5
+ * BXM
 <br><br>
 
 ------
