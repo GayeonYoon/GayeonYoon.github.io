@@ -43,6 +43,7 @@ feature: /assets/img/bg.jpg
 
 ------
 ## Work Experience
+ * 2021.03 - (주)브레인컨설팅 / SI사업부
  * 2020.11 - 2021.01 쓰리데이즈 (웹에이전시)
  * 2020.04 - 2020.11 Java언어 기반의 스마트 웹 Full-Stack개발자 양성 과정 수료
 <br><br>
